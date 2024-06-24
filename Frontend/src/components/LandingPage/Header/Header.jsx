@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <nav>
-        <ul>
+        <ul className="flex flex-row justify-between">
           <li>
             <Link to="/">Home</Link>
           </li>

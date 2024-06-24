@@ -16,10 +16,10 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
+        </Route>
           {/* Authentication  */}
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-        </Route>
       </Routes>
     </BrowserRouter>
   );

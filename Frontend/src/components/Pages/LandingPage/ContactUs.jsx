@@ -1,8 +1,15 @@
 import React from 'react'
+import ContactForm from '../../LandingPage/ContactUs/ContactForm.jsx'
+import CallToAction from '../../LandingPage/ContactUs/CallToAction'
+import Faq from '../../LandingPage/ContactUs/Faq.jsx'
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
+    <>
+      <ContactForm />
+      <CallToAction />
+      <Faq />
+    </>
   )
 }
 
