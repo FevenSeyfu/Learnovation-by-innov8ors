@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from  '../..//LandingPage/Home/Hero.jsx'
+import Hero from  '../../LandingPage/Home/Hero.jsx'
 import HowItWorks from '../../LandingPage/Home/HowItWorks.jsx';
 import CallToAction from '../../LandingPage/Home/CallToAction.jsx'
 
