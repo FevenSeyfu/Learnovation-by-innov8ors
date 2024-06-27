@@ -6,7 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'lightOrange': "#FFFDF7",
+        'silver': "#D3D3D3",
+        'white': "#FFFFFF",
+        'purple': "#602E93",
+        'lightGrey': "#797979",
+        'lightPink': "#C68CAD",
+        'fusciaPink': "#AD72C2",
+        'royalBlue': "#210080",
+      },
       fontFamily: {
+        inter: ["Inter", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
       },
     },
