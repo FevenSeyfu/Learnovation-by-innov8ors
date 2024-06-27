@@ -9,8 +9,8 @@ const Accordion = ({question, answer}) => {
   
     return(
         <div className="px-8 py-3 bg-white rounded-lg mb-5 w-full">
-            <div className="flex flex-row justify-between">
-                <p className="pr-24 font-normal text-sm">{question}</p>
+            <div className="flex justify-between items-center">
+                <p className="pr-4 font-normal text-sm flex-1">{question}</p>
                 <button className="p-2 bg-indigo-500 text-white rounded-2xl self-start" onClick={() => setIsActive(!isActive)}>
                     {isActive ? 
                         <IoIosArrowDown /> 

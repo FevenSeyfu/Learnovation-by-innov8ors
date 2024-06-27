@@ -4,19 +4,20 @@ import PropTypes from 'prop-types';
 export default function TextArea (props) {
     return(
         <div>
-            {props.label && <p className="text-gray-900 font-bold mb-2">{props.label}</p>}
-            <div>
+            {props.label && <p className="text-gray-700 font-semibold mb-2">{props.label}</p>}
+            <div className="mb-3">
                 <textarea
-                    className="placeholder-gray-500 text-xs border mb-3 rounded-lg border-silver p-3 w-full"
+                    className="placeholder-gray-500 text-xs text-gray-700 border rounded-lg border-silver p-3 w-full focus:outline-none focus:ring focus:ring-gray-500"
                     placeholder= {props.placeholder}
                     onChange={props.onChange}
+                    // eslint-disable-next-line react/no-unknown-property
                     error={props.error}
                     value={props.value}
                     rows={6}
                     cols={100}
                 />
+                {props.error && <p className="text-red-500 text-xs">{props.error}</p>}
             </div>
-            {props.error && <p>{props.error}</p>}
         </div>
     );
 }

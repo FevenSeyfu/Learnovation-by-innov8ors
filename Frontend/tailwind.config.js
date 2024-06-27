@@ -15,6 +15,7 @@ export default {
         'lightPink': "#C68CAD",
         'fusciaPink': "#AD72C2",
         'royalBlue': "#210080",
+        'textColor': "#242331",
       }
     },
     plugins: [],
