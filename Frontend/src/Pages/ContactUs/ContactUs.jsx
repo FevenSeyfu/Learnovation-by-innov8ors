@@ -1,16 +1,19 @@
 import React from 'react'
-import ContactForm from '../../LandingPage/ContactUs/ContactForm.jsx'
-import CallToAction from '../../LandingPage/ContactUs/CallToAction'
-import Faq from '../../LandingPage/ContactUs/Faq.jsx'
+import ContactForm from '../../components/ContactUs/ContactForm.jsx'
+import CallToAction from '../../components/ContactUs/CallToAction.jsx'
+import Faq from '../../components/ContactUs/Faq.jsx'
+
 
 const ContactUs = () => {
-  return (
-    <>
-      <ContactForm />
-      <CallToAction />
-      <Faq />
-    </>
-  )
+    return (
+        <>
+            <div className="bg-lightOrange">
+                <ContactForm />
+                <CallToAction />
+                <Faq />
+            </div>
+        </>
+    )
 }
 
 export default ContactUs
