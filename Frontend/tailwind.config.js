@@ -15,6 +15,9 @@ export default {
         'lightPink': "#C68CAD",
         'fusciaPink': "#AD72C2",
         'royalBlue': "#210080",
+        'lightPurple' : "#EFECFF",
+        'darkPurple' : '#5236FF',
+        'darkGray' : '#242331',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
