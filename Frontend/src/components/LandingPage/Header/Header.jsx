@@ -25,7 +25,7 @@ const Header = () => {
 
                   <div className="flex items-center space-x-4"> {/* Increased spacing with space-x-8 */}
                       <Link to="/signup"
-                              className="bg-purple-500 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                              className="bg-purple hover:opacity-95 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                           Sign Up
                       </Link>
                       <Link to="/login"
