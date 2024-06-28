@@ -1,13 +1,17 @@
 import React from "react";
 import features from "../../../utils/FeaturesData";
 import getImageURL from "../../../utils/getImages-utils";
+import TitleBtn from "../../utility/TitleBtn";
+import HeadingH1 from "../../utility/HeadingH1";
 
 const Features = () => {
   return (
     <div className="flex flex-col gap-7 md:gap-11 mt-7 px-[45px] md:px-[10%] justify-center items-center font-nunito md:font-inter">
       <div id="title" className="flex flex-col gap-8 items-center  text-left ">
-        <div id="feature" className="py-6 px-12 w-[165px] rounded-full bg-lightPurple text-darkPurple font-semibold text-lg text-center">Features</div>
-        <h1 className="text-darkGray text-4xl md:text-[50px] font-extrabold md:font-semibold leading-9 md:leading-[55px]  text-left md:text-center md:w-2/3">Powerful features to boost your productivity</h1>
+        <TitleBtn>Features</TitleBtn>
+        <HeadingH1>
+        Powerful features to boost your productivity
+        </HeadingH1>
       </div>
       <ul id="feature-list" className="text-darkGray text-left flex flex-col gap-16 md:gap-y-48 w-full  md:justify-center ">
         {features.map((feature,index) => (
