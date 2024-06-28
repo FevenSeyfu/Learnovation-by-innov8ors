@@ -29,6 +29,7 @@ nav {
     width: 277px;
     height: 100%;
     background-color: #FCFCFD;
+    border-right: 1px solid #E1E1E1;
 }
 
 .sidebar-right-top {
