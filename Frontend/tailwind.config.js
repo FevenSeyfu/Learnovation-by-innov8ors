@@ -15,8 +15,15 @@ export default {
         'lightPink': "#C68CAD",
         'fusciaPink': "#AD72C2",
         'royalBlue': "#210080",
-        'textColor': "#242331",
-      }
+         'textColor': "#242331",
+        'lightPurple' : "#EFECFF",
+        'darkPurple' : '#5236FF',
+        'darkGray' : '#242331',
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
+      },
     },
     plugins: [],
   }
