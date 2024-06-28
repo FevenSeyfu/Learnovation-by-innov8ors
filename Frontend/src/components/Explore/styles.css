@@ -2,6 +2,7 @@
 
 :root {
     --f-inter: "Inter", sans-serif;
+    --c-blue-dark-text: #101828;
 }
 
 * {
@@ -104,9 +105,11 @@ main {
 }
 
 .explore-header-text > span {
+    width: max-content;
     font-weight: 700;
     font-size: 18px;
     line-height: 21.78px;
+    color: var(--c-blue-dark-text);
 }
 
 .search-category-level {
@@ -133,14 +136,14 @@ main {
     height: 100%;
     border: 0;
     background-color: transparent;
-    color: black;
+    color: var(--c-blue-dark-text);
     outline: none;
     font-size: 18px;
     font-weight: 400;
 }
 
 .search > input::placeholder {
-    color: black;
+    color: var(--c-blue-dark-text);
     font-size: 18px;
     font-weight: 400;
 }
@@ -167,7 +170,7 @@ main {
 }
 
 .category-select-btn > span {
-    color: #101828;
+    color: var(--c-blue-dark-text);
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;
@@ -187,4 +190,11 @@ main {
     justify-content: center;
     font-family: var(--f-inter);
     cursor: pointer;
+}
+
+.level-select-btn > span {
+    color: var(--c-blue-dark-text);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
 }
