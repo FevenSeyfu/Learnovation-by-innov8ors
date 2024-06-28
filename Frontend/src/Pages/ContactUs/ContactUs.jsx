@@ -5,11 +5,13 @@ import Faq from '../../components/ContactUs/Faq.jsx'
 const ContactUs = () => {
   return (
     <>
+
       <div className="bg-lightOrange">
         <ContactForm />
         <CallToAction />
         <Faq />
       </div>
+
     </>
   )
 
