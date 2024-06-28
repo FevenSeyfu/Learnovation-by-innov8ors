@@ -2,6 +2,7 @@ import React from 'react'
 import ContactForm from '../../components/ContactUs/ContactForm.jsx'
 import CallToAction from '../../components/ContactUs/CallToAction.jsx'
 import Faq from '../../components/ContactUs/Faq.jsx'
+
 const ContactUs = () => {
   return (
     <>
@@ -14,7 +15,6 @@ const ContactUs = () => {
 
     </>
   )
-
 }
 
 export default ContactUs
