@@ -1,8 +1,8 @@
 import React from "react";
 import features from "../../../utils/FeaturesData";
 import getImageURL from "../../../utils/getImages-utils";
-import TitleBtn from "../../utility/TitleBtn";
-import HeadingH1 from "../../utility/HeadingH1";
+import TitleBtn from "../../utility/Home/TitleBtn";
+import HeadingH1 from "../../utility/Home/HeadingH1";
 
 const Features = () => {
   return (
