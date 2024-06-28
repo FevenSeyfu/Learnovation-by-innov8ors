@@ -4,6 +4,7 @@ import CallToAction from '../../components/LandingPage/Home/CallToAction.jsx'
 import Features from '../../components/LandingPage/Home/Features.jsx';
 import HowItWorks from '../../components/LandingPage/Home/HowItWorks.jsx';
 const HomePage = () => {
+
   return (
     <div>
         <Hero />
@@ -12,5 +13,6 @@ const HomePage = () => {
         <CallToAction />
     </div>
   )
+
 }
 export default HomePage
