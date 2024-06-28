@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           <div className="flex justify-center">
-            <img src="/LearnovationAcademy.png" alt="Academy Logo" className="h-20" />
+            <img src="/LearnovationAcademyLogo.png" alt="Academy Logo" className="h-20" />
           </div>
         </div>
       </footer>
