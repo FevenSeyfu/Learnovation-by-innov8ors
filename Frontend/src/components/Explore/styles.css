@@ -211,23 +211,40 @@ main {
     left: -75px;
     position: absolute;
     width: 270.75px;
-    height: 120px;
     border-radius: 16px;
     padding: 16px;
     gap: 8px;
     border: 1px solid #D0D5DD;
     background-color: #FFFFFF;
     z-index: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
 }
 
-.level-inner > input {
+.level-inner > div {
     width: 100%;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--f-inter);
 }
+
+.level-inner > div > span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #667085;
+}
+
+.level-selec-js {
+    display: flex;
+}
+
+.level-select-svg > svg {
+    transform: rotateZ(180deg);
+}
+
 
 /* CALENDAR */
 
