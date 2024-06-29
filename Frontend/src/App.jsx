@@ -7,6 +7,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
 import Onboarding from "./Pages/Onboarding/Onboarding";
+import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 
 function App() {
   return (
@@ -18,10 +19,18 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-          {/* Authentication  */}
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/onboarding" element={<Onboarding />} />
+        {/* Authentication  */}
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route
+          path="/onboarding"
+          element={
+            <OnboardingFormProvider>
+              <Onboarding />
+            </OnboardingFormProvider>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

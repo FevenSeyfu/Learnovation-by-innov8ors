@@ -37,7 +37,7 @@ const onboardingFormReducer = (state, action) => {
   }
 };
 
-const onboardingFormProvider = ({ children }) => {
+const OnboardingFormProvider = ({ children }) => {
   const [state, dispatch] = useReducer(onboardingFormReducer, initialState);
 
   return (
@@ -55,4 +55,5 @@ const useOnboardingFormContext = () => {
   return context;
 };
 
-export { onboardingFormProvider, useOnboardingFormContext };
+
+export { OnboardingFormProvider, useOnboardingFormContext };
