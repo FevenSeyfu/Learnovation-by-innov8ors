@@ -403,4 +403,5 @@ main {
     font-family: var(--f-inter);
     font-size: 14px;
     line-height: 20px;
+    cursor: pointer;
 }
