@@ -264,3 +264,143 @@ main {
     place-content: center;
     cursor: pointer;
 }
+
+/* CARD */
+
+.container-card {
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    /* width: 393px; */
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #C8C7FF;
+    background-color: #FCFCFD;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card > img {
+    width: 100%;
+    height: 182px;
+    border-radius: 8px 8px 0 0;
+    background-color: #D9D9D9;
+}
+
+.card > h2 {
+    font-family: var(--f-inter);
+    color: var(--c-blue-dark-text);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.description-account {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.description-text > h3 {
+    font-family: var(--f-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+}
+
+.more-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.more-info > div {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.more-info > div > span {
+    font-weight: 500;
+    font-family: var(--f-inter);
+    font-size: 12px;
+    line-height: 18px;
+    color: #667085;
+}
+
+.learnears-enrolled-text > span {
+    font-weight: 500;
+    font-family: var(--f-inter);
+    font-size: 12px;
+    line-height: 18px;
+    color: #667085;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-itself {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-image {
+    width: 40px;
+    height: 40px;
+}
+
+.account-image > img {
+    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.account-text > h3 {
+    color: #101828;
+    line-height: 15.73px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--f-inter);
+}
+
+.account-text > span {
+    color: #98A2B3;
+    line-height: 15.73px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--f-inter);
+}
+
+.account > .enroll-button > button {
+    width: 67px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 8px 14px 8px 14px;
+    background-color: #602E93;
+    border: 0;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-weight: 600;
+    font-family: var(--f-inter);
+    font-size: 14px;
+    line-height: 20px;
+}
