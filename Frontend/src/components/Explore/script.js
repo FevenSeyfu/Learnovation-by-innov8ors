@@ -18,3 +18,11 @@ levelSelectBtn.addEventListener('click', () => {
     levelInner.classList.toggle('level-selec-js');
     levelSelectBtn.classList.toggle('level-select-svg');
 });
+
+const categorySelectBtn = document.querySelector('.category-select-btn');
+const categoryInner = document.querySelector('.category-inner');
+
+categorySelectBtn.addEventListener('click', () => {
+    categoryInner.classList.toggle('category-selec-js');
+    categorySelectBtn.classList.toggle('category-select-svg');
+});
