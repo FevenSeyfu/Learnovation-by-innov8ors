@@ -20,7 +20,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipiscing elit interdum
           ullamcorper sed pharetra sene.
         </p>
-        <ButtonSm onClick={handleClick}>Get Started</ButtonSm>
+        <ButtonSm onClick={handleClick} disabled={false}>Get Started</ButtonSm>
       </section>
       <img src={homeCtaImg} alt="user image" className="w-full  md:w-1/2 h-auto" />
     </div>
