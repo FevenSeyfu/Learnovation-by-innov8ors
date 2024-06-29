@@ -8,3 +8,13 @@ const sidebarAnchors = document.querySelectorAll('.sidebar-anchor');
         sidebarAnchor.classList.remove('opened-anchor');
     });
 }; */
+
+// LEVEL OPTIONS
+
+const levelSelectBtn = document.querySelector('.level-select-btn');
+const levelInner = document.querySelector('.level-inner');
+
+levelSelectBtn.addEventListener('click', () => {
+    levelInner.classList.toggle('level-selec-js');
+    levelSelectBtn.classList.toggle('level-select-svg');
+});
