@@ -3,7 +3,7 @@ import { useOnboardingFormContext } from "../../Context/OnboardingFormContext";
 import FormProgress from "../../components/Onboarding/FormProgress";
 import FormStep from "../../components/Onboarding/FormStep";
 import stepsData from "../../utils/onbaordingSteps";
-import ButtonSm from "../../components/utility/Home/ButtonSm";
+import ButtonCTA from "../../components/utility/ButtonCTA";
 
 const Onboarding = () => {
   const { state, dispatch } = useOnboardingFormContext();
@@ -27,7 +27,7 @@ const Onboarding = () => {
         Back
       </button>
       {isLastStep ? (
-        <ButtonSm onClick={() => dispatch({ type: "FINISH_ONBOARDING" })}  disabled={!isSelected}>Finish</ButtonSm>
+        <ButtonCTA onClick={() => dispatch({ type: "FINISH_ONBOARDING" })}  disabled={!isSelected}>Finish</ButtonCTA>
       ) : (
         <button onClick={() => dispatch({ type: "NEXT_STEP" })}
         disabled={!isSelected}>Continue</button>

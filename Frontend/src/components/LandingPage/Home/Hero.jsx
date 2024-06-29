@@ -1,7 +1,7 @@
 import React from "react";
 import heroImg from "../../../assets/images/hero-img.png";
-import ButtonSm from "../../utility/Home/ButtonSm";
 import { useNavigate } from "react-router-dom";
+import ButtonCTA from "../../utility/ButtonCTA";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipiscing elit interdum
           ullamcorper sed pharetra sene.
         </p>
-        <ButtonSm onClick={handleClick}>Get Started</ButtonSm>
+        <ButtonCTA onClick={handleClick}>Get Started</ButtonCTA>
       </section>
       <img src={heroImg} alt="hero image" className="w-full md:w-1/2 h-auto" />
     </div>
