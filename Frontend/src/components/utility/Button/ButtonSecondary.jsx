@@ -11,11 +11,11 @@ const ButtonSecondary = ({ color, size, onClick, disabled, children }) => {
   return (
     <button
       onClick={onClick}
-      className={`font-inter font-semibold text-lg leading-7 border rounded-lg shadow-sm disabled:cursor-not-allowed ${
+      className={`font-inter font-semibold text-lg leading-7 border rounded-lg shadow-sm  ${
         color == "gray"
-          ? "text-gray700 bg-gray300 border-gray300 hover:bg-[#F9FAFB] hover:border-[#F9FAFB] disabled:bg-lightPurple50 disabled:border-lightPurple50 disabled:text-gray300"
+          ? "text-gray700 bg-white border-gray300 hover:bg-[#F9FAFB] hover:border-[#D0D5DD] disabled:bg-lightPurple50 disabled:border-lightPurple50 disabled:text-gray300"
           : "text-royalBlue bg-brand50 border-brand50 hover:bg-[#F4EBFF] hover:border-[#F4EBFF] disabled:text-[#D6BBFB] disabled:bg-[#FCFAFF] disabled:border-[#FCFAFF]"
-      } ${sizeClasses[size] || "w-[106px] h-[60px]"}`}
+      } disabled:cursor-not-allowed ${sizeClasses[size] || "w-[106px] h-[60px]"}`}
       disabled={disabled}
     >
       {children}

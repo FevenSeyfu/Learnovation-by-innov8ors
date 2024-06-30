@@ -1,7 +1,7 @@
 import React from "react";
 import homeCtaImg from "../../../assets/images/home-cta-img.png";
 import { useNavigate } from "react-router-dom";
-import ButtonCTA from "../../utility/ButtonCTA";
+import ButtonCTA from "../../utility/Button/ButtonCTA";
 
 const Hero = () => {
   const navigate = useNavigate();

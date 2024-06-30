@@ -11,7 +11,7 @@ const ButtonPrimary = ({ size, onClick, disabled, children }) => {
   return (
     <button
       onClick={onClick}
-      className={`text-white font-inter font-semibold text-lg leading-7 border rounded-lg bg-purple border-purple shadow-sm hover:bg-royalBlue hover:border-royalBlue disabled:bg-lightPurple50 disabled:border-lightPurple50"
+      className={`text-white font-inter font-semibold text-lg leading-7 border rounded-lg bg-purple border-purple shadow-sm hover:bg-royalBlue hover:border-royalBlue disabled:bg-lightPurple50 disabled:border-lightPurple50 disabled:cursor-not-allowed"
        ${sizeClasses[size] || 'w-[106px] h-[60px]'}`}
       disabled={disabled}
     >
