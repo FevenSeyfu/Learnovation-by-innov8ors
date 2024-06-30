@@ -50,10 +50,11 @@ const OnboardingFormProvider = ({ children }) => {
 const useOnboardingFormContext = () => {
   const context = useContext(OnboardingFormContext);
   if (!context) {
-    throw new Error("useOnboardingFormContext must be used within a OnboardingFormProvider");
+    throw new Error(
+      "useOnboardingFormContext must be used within a OnboardingFormProvider"
+    );
   }
   return context;
 };
-
 
 export { OnboardingFormProvider, useOnboardingFormContext };

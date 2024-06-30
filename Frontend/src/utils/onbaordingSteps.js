@@ -2,7 +2,7 @@ const steps = [
   {
     id: 1,
     name: "courseCategory",
-    question: "Which course are you interested in??",
+    question: "Which course are you interested in?",
     options: {
       business: "Business",
       computerScience: "Computer Science",

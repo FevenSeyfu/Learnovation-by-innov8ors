@@ -1,32 +1,56 @@
 import React from "react";
 import { useOnboardingFormContext } from "../../Context/OnboardingFormContext";
-import Heading from "../utility/Onboarding/Heading";
+import Heading from "./Heading";
+import checkedIcon from "../../assets/images/icon-checkmark.svg";
 
 const FormStep = ({ step }) => {
   const { state, dispatch } = useOnboardingFormContext();
   if (state.step !== step.name) return null;
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = (value) => {
     dispatch({
       type: "UPDATE_FORM_DATA",
-      payload: { [step.name]: e.target.value },
+      payload: { [step.name]: value },
     });
   };
 
   return (
-    <div>
+    <div className="w-full flex flex-col gap-5">
       <Heading>{step.question}</Heading>
       {Object.entries(step.options).map(([key, value]) => (
-        <label key={key}>
+        <div
+          key={key}
+          className={`flex items-center space-x-2 flex-row-reverse justify-between border border-[#8482ED] rounded-lg py-4 px-6 ${
+            state.formData[step.name] === key ? "bg-[#EBE7FF]" : ""
+          }`}
+          onClick={() => handleOptionChange(key)}
+          role="button" 
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && handleOptionChange(key)} 
+        >
           <input
             type="radio"
+            id={`radio-${step.id}-${key}`}
             name={step.name}
             value={key}
             checked={state.formData[step.name] === key}
-            onChange={handleOptionChange}
+            onChange={() => handleOptionChange(key)}
+            className="hidden"
           />
-          {value}
-        </label>
+          <label
+            htmlFor={`radio-${step.id}-${key}`}
+            className={`w-[33.33px] h-[33.33px] rounded-full flex items-center justify-center cursor-pointer ${
+              state.formData[step.name] === key ? "bg-transparent" : "border-2 border-[#D0D5DD]"
+            }`}
+          >
+            {state.formData[step.name] === key && (
+              <img src={checkedIcon} alt="Checked" className="w-[33.33px] h-[33.33px]" />
+            )}
+          </label>
+          <span className="font-inter font-medium text-xl leading-[30px] text-[#344054]">
+            {value}
+          </span>
+        </div>
       ))}
     </div>
   );
