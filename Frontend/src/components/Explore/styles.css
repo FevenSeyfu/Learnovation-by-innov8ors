@@ -426,3 +426,149 @@ main {
     line-height: 20px;
     cursor: pointer;
 }
+
+/* CARD TWO */
+
+.card-two {
+    /* width: 393px; */
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #C8C7FF;
+    background-color: #FCFCFD;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-two > img {
+    width: 100%;
+    height: 182px;
+    border-radius: 8px 8px 0 0;
+    background-color: #D9D9D9;
+}
+
+.card-two > h2 {
+    font-family: var(--f-inter);
+    color: var(--c-blue-dark-text);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.description-account-two {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.description-two {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.description-two > p {
+    color: #344054;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: var(--f-inter);
+}
+
+.description-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.description-info > div {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.description-info > div > span {
+    font-weight: 400;
+    font-family: var(--f-inter);
+    font-size: 12px;
+    line-height: 18px;
+    color: #667085;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.price > span {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.73px;
+    color: #101828;
+    font-family: var(--f-inter);
+}
+
+.account-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-itself-two {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-two-image {
+    width: 40px;
+    height: 40px;
+}
+
+.account-two-image > img {
+    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.account-two-text > span:nth-of-type(1) {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+    font-family: var(--f-inter);
+}
+
+.account-two-text > h3 {
+    color: #101828;
+    line-height: 15.73px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--f-inter);
+}
+
+.account-two-text > span:nth-of-type(2) {
+    color: #98A2B3;
+    line-height: 15.73px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--f-inter);
+}
+
+.register-now-button > button {
+    width: 119px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 8px 14px 8px 14px;
+    background-color: #602E93;
+    border: 0;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-weight: 600;
+    font-family: var(--f-inter);
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
