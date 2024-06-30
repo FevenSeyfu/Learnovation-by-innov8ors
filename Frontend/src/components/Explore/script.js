@@ -1,14 +1,3 @@
-// SIDEBAR
-
-const sidebarAnchors = document.querySelectorAll('.sidebar-anchor');
-
-
-/* for (const sidebarAnchor of sidebarAnchors) {
-    sidebarAnchor.addEventListener('click', () => {
-        sidebarAnchor.classList.remove('opened-anchor');
-    });
-}; */
-
 // LEVEL OPTIONS
 
 const levelSelectBtn = document.querySelector('.level-select-btn');
@@ -25,4 +14,19 @@ const categoryInner = document.querySelector('.category-inner');
 categorySelectBtn.addEventListener('click', () => {
     categoryInner.classList.toggle('category-selec-js');
     categorySelectBtn.classList.toggle('category-select-svg');
+});
+
+// SIDEBAR
+
+const sidebarOne = document.querySelector('.sidebar-anchor-one');
+const sidebarTwo = document.querySelector('.sidebar-anchor-two');
+
+sidebarOne.addEventListener('click', () => {
+    sidebarOne.classList.add('opened-anchor');
+    sidebarTwo.classList.remove('opened-anchor');
+});
+
+sidebarTwo.addEventListener('click', () => {
+    sidebarOne.classList.remove('opened-anchor');
+    sidebarTwo.classList.add('opened-anchor');
 });
