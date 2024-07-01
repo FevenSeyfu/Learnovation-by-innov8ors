@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import TextInput from '../../components/utility/textInput';
 import Button from '../../components/utility/button';
 import ThirdPartyButton from '../../components/utility/thirdPartyButton';
@@ -32,7 +33,7 @@ const SignUp = () => {
   return (
     <div>
       
-      <div className="md:mb-10 mb-5 md:mt-32 mt-20 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
+      <div className="md:mb-10 mb-5 md:mt-24 mt-20 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
         
         <div className=" h-full w-full bg-white pt-8 rounded-md">
         
@@ -65,7 +66,7 @@ const SignUp = () => {
               <Button>Join</Button>
 
               <div className="flex justify-end">
-                <p className="text-sm font-semibold">Already have an account? <span>Login</span></p>
+                <p className="text-sm font-semibold">Already have an account? <Link to='/login'>Login</Link></p>
               </div>
 
               <div className="flex items-center md:mt-5">
