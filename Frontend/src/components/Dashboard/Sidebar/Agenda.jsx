@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../../../Context/SidebarContext";
 
-const RightSideBar = () => {
+const Agenda = () => {
   const { toggleRightSidebar } = useSidebar();
   return (
     //     <aside id="default-sidebar" class="fixed top-0 right-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
@@ -74,9 +74,9 @@ const RightSideBar = () => {
     //     </div>
     //  </aside>
     <div className="h-screen border">
-      <button onClick={toggleRightSidebar}>Toggle Sidebar</button>
+      <button onClick={toggleRightSidebar}>Your Plan</button>
     </div>
   );
 };
 
-export default RightSideBar;
+export default Agenda;

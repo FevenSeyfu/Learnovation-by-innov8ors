@@ -2,9 +2,10 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../../Dashboard/Header/Header';
 import LeftSideBar from '../../Dashboard/Sidebar/LeftSideBar';
-import RightSideBar from '../../Dashboard/Sidebar/RightSideBar';
+import RightSideBar from '../../Dashboard/Sidebar/Agenda';
 import { useSidebar } from '../../../Context/SidebarContext';
 import ExpandedLeftSideBar from '../../Dashboard/Sidebar/ExpandedLeftSideBar';
+import Agenda from '../../Dashboard/Sidebar/Agenda';
 
 const Layout = () => {
   const { isLeftSidebarExpanded, isRightSidebarExpanded } = useSidebar();
@@ -27,14 +28,9 @@ const Layout = () => {
               <Outlet />
             </main>
           </div>
-          <aside className="overflow-y-auto w-20">
-            <RightSideBar />
+          <aside className={`overflow-y-auto  ${isRightSidebarExpanded ? ' w-[277px]' : 'w-20'}`}>
+            <Agenda />
           </aside>
-          {isRightSidebarExpanded && (
-            <aside className="overflow-y-auto w-[277px]" >
-              Your plan
-            </aside>
-          )}
         </div>
       </div>
     </>
