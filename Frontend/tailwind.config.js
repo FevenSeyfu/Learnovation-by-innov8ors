@@ -16,6 +16,10 @@ export default {
         'fusciaPink': "#AD72C2",
         'royalBlue': "#210080",
         'textColor': "#242331",
+        'textBlue': "#5663D9",
+        'orange': "#FFB58A",
+        'purplePink': "#8B15BD",
+        'deepOrange': "#F79367",
       }
     },
     plugins: [],
