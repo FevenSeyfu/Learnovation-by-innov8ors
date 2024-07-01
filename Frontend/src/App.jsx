@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/LandingPage/Layout";
+import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import NotFound from "./Pages/NotFound/NotFound";
 import HomePage from "./Pages/LandingPage/HomePage";
 import ContactUs from "./Pages/ContactUs/ContactUs";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Route>
+
         {/* Authentication  */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
