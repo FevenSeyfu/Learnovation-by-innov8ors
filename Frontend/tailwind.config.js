@@ -19,6 +19,10 @@ export default {
         'lightPurple' : "#EFECFF",
         'darkPurple' : '#5236FF',
         'darkGray' : '#242331',
+        'lightPurple50': '#EBE7FF',
+        'brand50':'#F9F5FF',
+        'gray700': '#344054',
+        'gray300' : '#D0D5DD'
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

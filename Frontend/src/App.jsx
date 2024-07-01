@@ -8,29 +8,40 @@ import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardLayout from "./components/Layout/DashboardPage/Layout";
+import Onboarding from "./Pages/Onboarding/Onboarding";
+import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 
 function App() {
   return (
-      <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<Layout />}>
-                  {/* landing page */}
-                  <Route index element={<HomePage />} />
-                  <Route path="/contact" element={<ContactUs />} />
-                  <Route path="*" element={<NotFound />} />
-              </Route>
-              {/* Authentication  */}
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/login" element={<Login />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* landing page */}
+          <Route index element={<HomePage />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        {/* Authentication  */}
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
 
-              <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route
+          path="/onboarding"
+          element={
+            <OnboardingFormProvider>
+              <Onboarding />
+            </OnboardingFormProvider>
+          }
+        />
+            
+        <Route path="/dashboard" element={<DashboardLayout />}>
               {/* dashboard page */}
               {/* <Route index element={<HomePage />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="*" element={<NotFound />} /> */}
-              </Route>
-          </Routes>
-      </BrowserRouter>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
