@@ -3,32 +3,41 @@ import { Outlet } from 'react-router-dom';
 import Header from '../../Dashboard/Header/Header';
 import LeftSideBar from '../../Dashboard/Sidebar/LeftSideBar';
 import RightSideBar from '../../Dashboard/Sidebar/RightSideBar';
-import { SidebarProvider,useSidebar } from '../../../Context/SidebarContext';
+import { useSidebar } from '../../../Context/SidebarContext';
+import ExpandedLeftSideBar from '../../Dashboard/Sidebar/ExpandedLeftSideBar';
 
 const Layout = () => {
   const { isLeftSidebarExpanded, isRightSidebarExpanded } = useSidebar();
-  const leftSidebarWidth = isLeftSidebarExpanded ? '277px' : '20px';
-  const rightSidebarWidth = isRightSidebarExpanded ? '277px' : '20px';
 
   return (
-    <SidebarProvider>
+    <>
       <div className="flex flex-col h-screen">
         <div className="flex flex-1 overflow-hidden">
-          <aside className={`border overflow-y-auto`} style={{ width: leftSidebarWidth }}>
+          <aside className="overflow-y-auto w-20">
             <LeftSideBar />
           </aside>
-          <div className="flex flex-col flex-1" style={{ marginLeft: leftSidebarWidth, marginRight: rightSidebarWidth }}>
-            <Header className="w-auto" />
+          {isLeftSidebarExpanded && (
+            <aside className="overflow-y-auto w-[277px] mt-[72px]">
+              <ExpandedLeftSideBar />
+            </aside>
+          )}
+          <div className="flex flex-col flex-1 overflow-hidden">
+            <Header />
             <main className="flex-1 overflow-y-auto">
               <Outlet />
             </main>
           </div>
-          <aside className={`border overflow-y-auto`} style={{ width: rightSidebarWidth }}>
+          <aside className="overflow-y-auto w-20">
             <RightSideBar />
           </aside>
+          {isRightSidebarExpanded && (
+            <aside className="overflow-y-auto w-[277px]" >
+              Your plan
+            </aside>
+          )}
         </div>
       </div>
-    </SidebarProvider>
+    </>
   );
 };
 export default Layout;
