@@ -6,6 +6,8 @@ import HomePage from "./Pages/LandingPage/HomePage";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 
@@ -31,6 +33,13 @@ function App() {
             </OnboardingFormProvider>
           }
         />
+            
+        <Route path="/dashboard" element={<DashboardLayout />}>
+              {/* dashboard page */}
+              {/* <Route index element={<HomePage />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<NotFound />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
