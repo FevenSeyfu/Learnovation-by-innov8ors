@@ -12,7 +12,7 @@ const Agenda = () => {
       {isRightSidebarExpanded && (
         <div>
         <div class="p-5 mb-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-            <time class="text-lg font-semibold text-gray-900 dark:text-white">January 13th, 2022</time>
+            <time class="text-2xl font-medium text-gray-900 dark:text-white">Today</time>
             <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
                 <li>
                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -48,7 +48,7 @@ const Agenda = () => {
             </ol>
         </div>
         <div class="p-5 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-            <time class="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
+            <time class="text-2xl font-medium text-gray-900 dark:text-white">This Month</time>
             <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
                 <li>
                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
