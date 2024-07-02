@@ -28,7 +28,7 @@ const Layout = () => {
               <Outlet />
             </main>
           </div>
-          <aside className={`overflow-y-auto  ${isRightSidebarExpanded ? ' w-[277px]' : 'w-20'}`}>
+          <aside className={`overflow-y-auto  ${isRightSidebarExpanded ? ' w-[515px]' : 'w-20'}`}>
             <Agenda />
           </aside>
         </div>
