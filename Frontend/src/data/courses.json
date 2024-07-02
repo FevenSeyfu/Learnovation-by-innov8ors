@@ -1,0 +1,122 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Graphic Design",
+      "description": "This intermediate-level course builds on fundamental graphic design principles, delving deeper into advanced techniques, sophisticated design concepts, and the use of industry-standard software. Students will enhance their design skills and work on complex projects, preparing them for professional design challenges.",
+      "duration": "30 hours",
+      "rating": 4.9,
+      "level": "Intermediate",
+      "learnersEnrolled": "400+",
+      "language": "English",
+      "lastUpdated": "2024-09-03",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "url_to_course_image",
+      "instructorName": "Emily Parker",
+      "instructorImg": "url_to_instructor_image",
+      "instructorRole": "Design director",
+      "whatYouWillLearn": [
+        "Understand the fundamental principles of graphic design",
+        "Master the use of typography and color theory",
+        "Develop proficiency in industry-standard design software (e.g., Adobe Photoshop, Illustrator)",
+        "Create and evaluate designs for print and digital media",
+        "Build a professional design portfolio"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly assignments to practice advanced design skills",
+        "projects": "Three major projects to apply learned concepts",
+        "portfolio": "Enhancement of a professional design portfolio",
+        "finalExam": "A comprehensive exam covering all course material",
+        "certification": "Upon successful completion, students will receive an Intermediate Graphic Design certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Getting Started with Programming",
+          "subtopics": [
+            {
+              "title": "Introduction to Programming Concepts",
+              "video": "30 minutes",
+              "project": "1 hour",
+              "interactiveTutorial": "45 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Your First Program",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Advanced Typography",
+          "subtopics": [
+            {
+              "title": "Typography Fundamentals",
+              "video": "20 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Working with Typefaces",
+              "assignment": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Advanced Color Theory",
+          "subtopics": [
+            {
+              "title": "Understanding Color Psychology",
+              "video": "25 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Applying Colors in Design",
+              "project": "2.5 hours",
+              "assignment": "2.5 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Adobe Illustrator Mastery",
+          "subtopics": [
+            {
+              "title": "Mastering the Pen Tool",
+              "video": "45 minutes"
+            },
+            {
+              "title": "Advanced Illustration Techniques",
+              "project": "4 hours",
+              "interactiveTutorial": "1.5 hours"
+            },
+            {
+              "title": "Complex Shapes and Patterns",
+              "assignment": "4 hours"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Professional Design Projects and Portfolio Development",
+          "subtopics": [
+            {
+              "title": "Creating a Cohesive Design Portfolio",
+              "video": "1 hour",
+              "assignment": "5 hours"
+            },
+            {
+              "title": "Real-World Design Projects",
+              "project": "10 hours"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
