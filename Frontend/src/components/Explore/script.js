@@ -20,13 +20,19 @@ categorySelectBtn.addEventListener('click', () => {
 
 const sidebarOne = document.querySelector('.sidebar-anchor-one');
 const sidebarTwo = document.querySelector('.sidebar-anchor-two');
+const coursesContainer = document.querySelector('.container-card');
+const eventsContainer = document.querySelector('.container-card-events');
 
 sidebarOne.addEventListener('click', () => {
     sidebarOne.classList.add('opened-anchor');
     sidebarTwo.classList.remove('opened-anchor');
+    coursesContainer.style.display = 'grid';
+    eventsContainer.style.display = 'none';
 });
 
 sidebarTwo.addEventListener('click', () => {
     sidebarOne.classList.remove('opened-anchor');
     sidebarTwo.classList.add('opened-anchor');
+    coursesContainer.style.display = 'none';
+    eventsContainer.style.display = 'grid';
 });
