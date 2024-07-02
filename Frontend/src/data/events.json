@@ -1,58 +1,64 @@
 {
-    "events": [
-      {
-        "id": 1,
-        "title": "Global Hackathon 2024",
-        "date": "2024-05-15",
-        "location": "virtual",
-        "category": "Hackathon",
-        "description": "A 48-hour coding marathon where developers and designers come together to bring their ideas to life.",
-        "hosted_by": 11
-      },
-      {
-        "id": 2,
-        "title": "Startup Pitch Night",
-        "date": "2024-06-20",
-        "location": "virtual",
-        "category": "Pitch",
-        "description": "An evening of startup pitches where entrepreneurs present their innovative ideas to a panel of investors.",
-        "hosted_by": 12
-      },
-      {
-        "id": 3,
-        "title": "Code Challenges Month",
-        "date": "2024-07-01",
-        "location": "virtual",
-        "category": "Challenges",
-        "description": "A month-long series of coding challenges designed to test and improve your coding skills.",
-        "hosted_by": 11
-      },
-      {
-        "id": 4,
-        "title": "Tech Innovators Conference",
-        "date": "2024-08-05",
-        "location": "virtual",
-        "category": "Conference",
-        "description": "A conference bringing together the brightest minds in technology to discuss future innovations.",
-        "hosted_by": 12
-      },
-      {
-        "id": 5,
-        "title": "Web Development Workshop",
-        "date": "2024-09-10",
-        "location": "virtual",
-        "category": "Workshop",
-        "description": "A hands-on workshop focused on teaching the fundamentals of web development.",
-        "hosted_by": 11
-      },
-      {
-        "id": 6,
-        "title": "Tech Networking Event",
-        "date": "2024-10-15",
-        "location": "virtual",
-        "category": "Networking",
-        "description": "An opportunity to network with professionals and enthusiasts in the tech industry.",
-        "hosted_by": 12
-      }
-    ]
-  }
+  "events": [
+    {
+      "id": 1,
+      "title": "Global Hackathon 2024",
+      "img-url": "events/image1.png",
+      "date": "2024-05-15",
+      "location": "virtual",
+      "category": "Hackathon",
+      "description": "A 48-hour coding marathon where developers and designers come together to bring their ideas to life.",
+      "hosted_by": 11
+    },
+    {
+      "id": 2,
+      "title": "Startup Pitch Night",
+      "img-url": "events/image2.png",
+      "date": "2024-06-20",
+      "location": "virtual",
+      "category": "Pitch",
+      "description": "An evening of startup pitches where entrepreneurs present their innovative ideas to a panel of investors.",
+      "hosted_by": 12
+    },
+    {
+      "id": 3,
+      "title": "Code Challenges Month",
+      "img-url": "events/image3.png",
+      "date": "2024-07-01",
+      "location": "virtual",
+      "category": "Challenges",
+      "description": "A month-long series of coding challenges designed to test and improve your coding skills.",
+      "hosted_by": 11
+    },
+    {
+      "id": 4,
+      "title": "Tech Innovators Conference",
+      "img-url": "events/image4.png",
+      "date": "2024-08-05",
+      "location": "virtual",
+      "category": "Conference",
+      "description": "A conference bringing together the brightest minds in technology to discuss future innovations.",
+      "hosted_by": 12
+    },
+    {
+      "id": 5,
+      "title": "Web Development Workshop",
+      "img-url": "events/image5.png",
+      "date": "2024-09-10",
+      "location": "virtual",
+      "category": "Workshop",
+      "description": "A hands-on workshop focused on teaching the fundamentals of web development.",
+      "hosted_by": 11
+    },
+    {
+      "id": 6,
+      "title": "Tech Networking Event",
+      "img-url": "events/image6.png",
+      "date": "2024-10-15",
+      "location": "virtual",
+      "category": "Networking",
+      "description": "An opportunity to network with professionals and enthusiasts in the tech industry.",
+      "hosted_by": 12
+    }
+  ]
+}
