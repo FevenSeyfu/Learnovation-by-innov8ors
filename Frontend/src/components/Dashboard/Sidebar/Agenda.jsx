@@ -13,15 +13,19 @@ const Agenda = () => {
       
         <button onClick={toggleRightSidebar}>
         {(!isRightSidebarExpanded) && (
-            <div className="p-7">
+            <div className="p-6">
               <img src={plansIcon} className=""></img>
             </div>
             
           )}
           {isRightSidebarExpanded && (
-            <div>
-              <img src={plansIcon} className=""></img>
-              <p>Your Plan</p>
+            <div className="p-5 mb-4">
+              <ul>
+                <li className="flex items-center space-x-4">
+                  <img src={plansIcon} ></img>
+                  <p className="font-medium text-xl">Your Plan</p>
+                </li>
+              </ul>
             </div>
             
           )}
