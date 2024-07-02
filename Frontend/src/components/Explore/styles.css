@@ -290,15 +290,20 @@ main {
 
 .container-card {
     width: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
+  
     gap: 32px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
+.container-card-events {
+    width: 100%;
+    gap: 32px;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .card {
-    /* width: 393px; */
     border-radius: 16px;
     padding: 16px;
     border: 1px solid #C8C7FF;
