@@ -8,7 +8,6 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 import { SidebarProvider } from "./Context/SidebarContext";
