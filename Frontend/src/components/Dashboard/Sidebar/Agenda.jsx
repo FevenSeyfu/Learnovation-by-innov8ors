@@ -2,13 +2,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../../../Context/SidebarContext";
+import hostImg from "../../../assets/images/host-example.png";
+import plansIcon from "../../../assets/images/plans.png";
 
 const Agenda = () => {
   const { toggleRightSidebar } = useSidebar();
   const { isRightSidebarExpanded } = useSidebar();
   return (
     <div className="h-screen border">
-      <button onClick={toggleRightSidebar}>Your Plan</button>
+      
+        <button onClick={toggleRightSidebar}>
+        {(!isRightSidebarExpanded) && (
+            <div className="p-7">
+              <img src={plansIcon} className=""></img>
+            </div>
+            
+          )}
+          {isRightSidebarExpanded && (
+            <div>
+              <img src={plansIcon} className=""></img>
+              <p>Your Plan</p>
+            </div>
+            
+          )}
+        </button>
+      
       {isRightSidebarExpanded && (
         <div>
         <div class="p-5 mb-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
