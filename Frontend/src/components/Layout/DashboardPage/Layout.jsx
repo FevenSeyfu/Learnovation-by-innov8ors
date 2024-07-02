@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../../Dashboard/Header/Header';
 import LeftSideBar from '../../Dashboard/Sidebar/LeftSideBar';
-import RightSideBar from '../../Dashboard/Sidebar/Agenda';
 import { useSidebar } from '../../../Context/SidebarContext';
 import ExpandedLeftSideBar from '../../Dashboard/Sidebar/ExpandedLeftSideBar';
 import Agenda from '../../Dashboard/Sidebar/Agenda';

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Heading = ({ children }) => {
+const GradientPurpleHeading = ({ children }) => {
   return (
     <h1
       className="font-inter font-semibold text-5xl leading-[60px] text-center tracking-tighter "
@@ -18,4 +18,4 @@ const Heading = ({ children }) => {
   );
 };
 
-export default Heading;
+export default GradientPurpleHeading;
