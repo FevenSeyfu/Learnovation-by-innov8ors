@@ -10,6 +10,11 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
+import { SidebarProvider } from "./Context/SidebarContext";
+import CourseDetail from "./Pages/Courses/CourseDetail";
+import Events from "./Pages/Events/Events";
+import Courses from "./Pages/Courses/Courses";
+import Mentors from "./Pages/Mentors/Mentors";
 
 function App() {
   return (
@@ -33,12 +38,12 @@ function App() {
             </OnboardingFormProvider>
           }
         />
-            
-        <Route path="/dashboard" element={<DashboardLayout />}>
-              {/* dashboard page */}
-              {/* <Route index element={<HomePage />} />
-              <Route path="/contact" element={<ContactUs />} />
-              <Route path="*" element={<NotFound />} /> */}
+         <Route path="dashboard" element={<SidebarProvider><DashboardLayout /></SidebarProvider>}>
+          <Route index element={<Dashboard />} />
+          <Route path="explore/courses" element={<Courses />} />
+          <Route path="explore/events" element={<Events />} />
+          <Route path="explore/mentors" element={<Mentors />} />
+          <Route path="course/:id" element={<CourseDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
