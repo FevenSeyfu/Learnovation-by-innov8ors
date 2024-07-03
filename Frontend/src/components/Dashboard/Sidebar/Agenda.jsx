@@ -99,7 +99,7 @@ const Agenda = () => {
                                     <p className="text-xl font-medium dark:text-white">Course Goal</p>
 
                                     <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 font-semibold text-sm">
-                                      <div className="bg-gradient-to-r from-violet-500 to-pink-500 h-2.5 rounded-full w-[36%]"> </div>36%
+                                      <div className="bg-gradient-to-br from-violet-500 to-pink-500 h-2.5 rounded-full w-[36%]"> </div>36%
                                     </div>
                                   </div>
                                 </li>
