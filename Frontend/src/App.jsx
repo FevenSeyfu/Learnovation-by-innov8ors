@@ -15,6 +15,7 @@ import CourseDetail from "./Pages/Courses/CourseDetail";
 import Events from "./Pages/Events/Events";
 import Courses from "./Pages/Courses/Courses";
 import Mentors from "./Pages/Mentors/Mentors";
+import Streak from "./components/Dashboard/StreakTracker/StreakTracker";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             </OnboardingFormProvider>
           }
         />
+        <Route path="/streak-tracker" element={<Streak />} />
          <Route path="dashboard" element={<SidebarProvider><DashboardLayout /></SidebarProvider>}>
           <Route index element={<Dashboard />} />
           <Route path="explore/courses" element={<Courses />} />
