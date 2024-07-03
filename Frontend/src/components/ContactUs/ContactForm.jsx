@@ -31,8 +31,8 @@ const ContactForm = () => {
   });
 
   return (
-    <div className="mt-12 md:px-24 px-8">
-      <h3 className="text-3xl mt-12 mb-8 font-bold text-center md:pt-10 pt-5">Get in touch today!</h3>
+    <div className="md:px-24 px-8">
+      <h3 className="text-3xl mb-8 font-bold text-center md:pt-10 pt-5">Get in touch today!</h3>
       <form className="bg-white border-2 border-silver rounded-lg md:p-12 p-6" onSubmit={handleSubmit}>
         <TextInput 
           label="Full Name *"

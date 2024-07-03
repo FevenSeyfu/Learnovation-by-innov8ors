@@ -29,7 +29,7 @@ const ResetPasswordTwo = () => {
   });
 
   return (
-    <div>
+    <div className="bg-lightOrange md:pt-10 pt-10 md:pb-40 pb-60">
       
       <div className="rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:mt-24 mt-40 md:w-6/12">
         
