@@ -8,6 +8,15 @@ import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
 import ResetPassword from "./Pages/Authentication/ResetPassword";
 import ResetPasswordTwo from "./Pages/Authentication/ResetPasswordTwo";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import DashboardLayout from "./components/Layout/DashboardPage/Layout";
+import Onboarding from "./Pages/Onboarding/Onboarding";
+import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
+import { SidebarProvider } from "./Context/SidebarContext";
+import CourseDetail from "./Pages/Courses/CourseDetail";
+import Events from "./Pages/Events/Events";
+import Courses from "./Pages/Courses/Courses";
+import Mentors from "./Pages/Mentors/Mentors";
 
 function App() {
   return (
@@ -24,6 +33,22 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/resetPassword" element={<ResetPassword />} />
           <Route path="/resetPasswordTwo" element={<ResetPasswordTwo />} />
+
+        <Route
+          path="/onboarding"
+          element={
+            <OnboardingFormProvider>
+              <Onboarding />
+            </OnboardingFormProvider>
+          }
+        />
+         <Route path="dashboard" element={<SidebarProvider><DashboardLayout /></SidebarProvider>}>
+          <Route index element={<Dashboard />} />
+          <Route path="explore/courses" element={<Courses />} />
+          <Route path="explore/events" element={<Events />} />
+          <Route path="explore/mentors" element={<Mentors />} />
+          <Route path="course/:id" element={<CourseDetail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

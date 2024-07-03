@@ -1,0 +1,350 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Graphic Design",
+      "description": "This intermediate-level course builds on fundamental graphic design principles, delving deeper into advanced techniques, sophisticated design concepts, and the use of industry-standard software. Students will enhance their design skills and work on complex projects, preparing them for professional design challenges.",
+      "duration": "30 hours",
+      "rating": 4.9,
+      "level": "Intermediate",
+      "learnersEnrolled": "400+",
+      "language": "English",
+      "lastUpdated": "2024-09-03",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image1",
+      "instructorName": "Emily Parker",
+      "instructorImg": "instructor/image1",
+      "instructorRole": "Design director",
+      "whatYouWillLearn": [
+        "Understand the fundamental principles of graphic design",
+        "Master the use of typography and color theory",
+        "Develop proficiency in industry-standard design software (e.g., Adobe Photoshop, Illustrator)",
+        "Create and evaluate designs for print and digital media",
+        "Build a professional design portfolio"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly assignments to practice advanced design skills",
+        "projects": "Three major projects to apply learned concepts",
+        "portfolio": "Enhancement of a professional design portfolio",
+        "finalExam": "A comprehensive exam covering all course material",
+        "certification": "Upon successful completion, students will receive an Intermediate Graphic Design certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Getting Started with Programming",
+          "subtopics": [
+            {
+              "title": "Introduction to Programming Concepts",
+              "video": "30 minutes",
+              "project": "1 hour",
+              "interactiveTutorial": "45 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Your First Program",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Advanced Typography",
+          "subtopics": [
+            {
+              "title": "Typography Fundamentals",
+              "video": "20 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Working with Typefaces",
+              "assignment": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Advanced Color Theory",
+          "subtopics": [
+            {
+              "title": "Understanding Color Psychology",
+              "video": "25 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Applying Colors in Design",
+              "project": "2.5 hours",
+              "assignment": "2.5 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Adobe Illustrator Mastery",
+          "subtopics": [
+            {
+              "title": "Mastering the Pen Tool",
+              "video": "45 minutes"
+            },
+            {
+              "title": "Advanced Illustration Techniques",
+              "project": "4 hours",
+              "interactiveTutorial": "1.5 hours"
+            },
+            {
+              "title": "Complex Shapes and Patterns",
+              "assignment": "4 hours"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Professional Design Projects and Portfolio Development",
+          "subtopics": [
+            {
+              "title": "Creating a Cohesive Design Portfolio",
+              "video": "1 hour",
+              "assignment": "5 hours"
+            },
+            {
+              "title": "Real-World Design Projects",
+              "project": "10 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Web Development",
+      "description": "This course offers a comprehensive introduction to the basics of web development, covering HTML, CSS, and JavaScript. Students will learn to build responsive websites and gain a solid understanding of web development principles.",
+      "duration": "40 hours",
+      "rating": 4.8,
+      "level": "Beginner",
+      "learnersEnrolled": "500+",
+      "language": "English",
+      "lastUpdated": "2024-08-15",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image2",
+      "instructorName": "John Doe",
+      "instructorImg": "instructor/image2",
+      "instructorRole": "Senior Web Developer",
+      "whatYouWillLearn": [
+        "Basic HTML and HTML5",
+        "Styling with CSS",
+        "Interactive web pages with JavaScript",
+        "Responsive web design principles",
+        "Building and deploying a website"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly coding exercises",
+        "projects": "Two major projects to design and develop a website",
+        "portfolio": "Creation of a personal portfolio website",
+        "finalExam": "A comprehensive test on all topics covered",
+        "certification": "Upon successful completion, students will receive a Web Development certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "HTML Fundamentals",
+          "subtopics": [
+            {
+              "title": "Introduction to HTML",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "30 minutes",
+              "assignment": "1 hour"
+            },
+            {
+              "title": "Advanced HTML5 Features",
+              "video": "30 minutes",
+              "project": "1.5 hours",
+              "interactiveTutorial": "45 minutes",
+              "assignment": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Styling with CSS",
+          "subtopics": [
+            {
+              "title": "CSS Basics",
+              "video": "30 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Advanced CSS Techniques",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "JavaScript for Interactivity",
+          "subtopics": [
+            {
+              "title": "JavaScript Basics",
+              "video": "35 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Advanced JavaScript",
+              "project": "3 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Responsive Web Design",
+          "subtopics": [
+            {
+              "title": "Responsive Design Principles",
+              "video": "40 minutes"
+            },
+            {
+              "title": "Advanced Responsive Techniques",
+              "project": "4 hours",
+              "interactiveTutorial": "1 hour"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Web Deployment and Portfolio Development",
+          "subtopics": [
+            {
+              "title": "Deploying Your Website",
+              "video": "1 hour",
+              "assignment": "4 hours"
+            },
+            {
+              "title": "Portfolio Development",
+              "project": "8 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Data Science Fundamentals",
+      "description": "Dive into the world of data science with this comprehensive course covering data analysis, visualization, and machine learning. Learn to work with popular data science tools like Python, Pandas, and Matplotlib.",
+      "duration": "50 hours",
+      "rating": 4.7,
+      "level": "Intermediate",
+      "learnersEnrolled": "300+",
+      "language": "English",
+      "lastUpdated": "2024-07-22",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image3",
+      "instructorName": "Alice Johnson",
+      "instructorImg": "instructor/image3",
+      "instructorRole": "Data Scientist",
+      "whatYouWillLearn": [
+        "Python for data science",
+        "Data cleaning and preparation",
+        "Data visualization techniques",
+        "Introduction to machine learning",
+        "Building predictive models"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly data challenges",
+        "projects": "Three data analysis projects",
+        "portfolio": "Development of a data science portfolio",
+        "finalExam": "Comprehensive exam on data science topics",
+        "certification": "Data Science Fundamentals certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to Python for Data Science",
+          "subtopics": [
+            {
+              "title": "Python Basics",
+              "video": "50 minutes",
+              "project": "3 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Advanced Python for Data Analysis",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1.5 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Data Analysis and Visualization",
+          "subtopics": [
+            {
+              "title": "Exploratory Data Analysis",
+              "video": "30 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Creating Interactive Data Visualizations",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Machine Learning Basics",
+          "subtopics": [
+            {
+              "title": "Introduction to Machine Learning",
+              "video": "40 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Building Your First Machine Learning Model",
+              "project": "4 hours",
+              "assignment": "4 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Advanced Machine Learning Techniques",
+          "subtopics": [
+            {
+              "title": "Deep Learning Fundamentals",
+              "video": "1 hour"
+            },
+            {
+              "title": "Natural Language Processing",
+              "project": "5 hours",
+              "interactiveTutorial": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Data Science Project and Portfolio Development",
+          "subtopics": [
+            {
+              "title": "Capstone Project",
+              "video": "2 hours",
+              "assignment": "10 hours"
+            },
+            {
+              "title": "Portfolio Presentation",
+              "project": "5 hours"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
