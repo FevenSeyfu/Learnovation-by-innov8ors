@@ -1,9 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import searchIcon from "../../../assets/images/search_icon.png";
-import bolt from "../../../assets/images/dashboard-bolt.png";
-import inbox from "../../../assets/images/dashboard-inbox.png";
-import notification from "../../../assets/images/dashboard-notifications_none.png";
 import profileImg from "../../../assets/images/dashboard-profile-example.png";
 
 const Header = () => {
