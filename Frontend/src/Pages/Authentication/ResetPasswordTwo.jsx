@@ -7,17 +7,21 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 
-const ResetPasswordSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
+const ResetPasswordTwoSchema = Yup.object().shape({
+  password: Yup.string()
+               .required('Required')
+               .min(8, 'Must be at least 8 characters')
+               .max(12, 'Must be at most 12 characters'),
 })
 
-const ResetPassword = () => {
+const ResetPasswordTwo = () => {
   
   const {values, handleChange, handleSubmit, errors} = useFormik({
     initialValues: {
-      email: '',
+      newPassword: '',
+      confirmPassword: '',
     },
-    validationSchema:ResetPasswordSchema,
+    validationSchema:ResetPasswordTwoSchema,
     onSubmit: values => {
       // alert(JSON.stringify(values));
       console.log(values);
@@ -39,14 +43,23 @@ const ResetPassword = () => {
           
             <form className="md:pt-6 pt-3" onSubmit={handleSubmit}>
               <TextInput 
-                label="Email"
-                onChange={handleChange('email')}
-                error={errors.email}
-                value={values.email}
+                label="New Password"
+                type="password"
+                onChange={handleChange('newPassword')}
+                error={errors.newPassword}
+                value={values.newPassword}
+              />
+
+              <TextInput 
+                label="Confirm Password"
+                type="password"
+                onChange={handleChange('confirmPassword')}
+                error={errors.confirmPassword}
+                value={values.confirmPassword}
               />
               
               <Button>
-                <Link to='/resetPasswordTwo'>Reset Password</Link>
+                <Link to='/login'>Reset Password</Link>
               </Button>
             </form>
 
@@ -67,4 +80,4 @@ const ResetPassword = () => {
 };
 
 
-export default  ResetPassword;
+export default  ResetPasswordTwo;

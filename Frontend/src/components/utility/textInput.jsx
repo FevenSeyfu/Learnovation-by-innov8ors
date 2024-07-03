@@ -9,6 +9,7 @@ export default function TextInput (props) {
                 <input
                     className="placeholder-gray-500 text-xs text-gray-700 border rounded-lg border-silver p-3 w-full focus:outline-none focus:ring focus:ring-gray-500"
                     placeholder= {props.placeholder}
+                    type={props.type}
                     onChange={props.onChange}
                     // eslint-disable-next-line react/no-unknown-property
                     error={props.error}
@@ -25,6 +26,7 @@ TextInput.propTypes = {
     error: PropTypes.string,
     label: PropTypes.string,
     placeholder: PropTypes.string,
+    type: PropTypes.string,
     iconName: PropTypes.string,
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func,

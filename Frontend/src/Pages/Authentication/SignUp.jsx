@@ -11,9 +11,17 @@ import * as Yup from 'yup';
 
 
 const SignUpSchema = Yup.object().shape({
-  name: Yup.string().min(2, 'Name is too Short').max(50, 'Name is too Long!').required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().required('Required'),
+  name: Yup.string()
+           .min(2, 'Name is too Short')
+           .max(50, 'Name is too Long!')
+           .required('Required'),
+  email: Yup.string()
+            .email('Invalid email')
+            .required('Required'),
+  password: Yup.string()
+               .required('Required')
+               .min(8, 'Must be at least 8 characters')
+               .max(12, 'Must be at most 12 characters'),
 })
 
 const SignUp = () => {
@@ -58,6 +66,7 @@ const SignUp = () => {
               />
               <TextInput 
                 label="Password"
+                type="password"
                 onChange={handleChange('password')}
                 error={errors.password}
                 value={values.password}
@@ -109,7 +118,7 @@ const SignUp = () => {
 
       <div className="text-center md:text-base text-sm mb-10">
         <p>By Signing up, you acknowledge that you have read </p>
-        <p>the <span className="underline">terms and conditions</span> and <span className="underline">privacy policy.</span></p>
+        <p>the <Link className="underline">terms and conditions</Link> and <Link className="underline">privacy policy.</Link></p>
       </div>
 
     </div>

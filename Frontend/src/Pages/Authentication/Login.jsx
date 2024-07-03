@@ -11,8 +11,13 @@ import * as Yup from 'yup';
 
 
 const LogInSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().required('Required'),
+  email: Yup.string()
+            .email('Invalid email')
+            .required('Required'),
+  password: Yup.string()
+               .required('Required')
+               .min(8, 'Must be at least 8 characters')
+               .max(12, 'Must be at most 12 characters'),
 })
 
 const LogIn = () => {
@@ -50,13 +55,16 @@ const LogIn = () => {
               />
               <TextInput 
                 label="Password"
+                type="password"
                 onChange={handleChange('password')}
                 error={errors.password}
                 value={values.password}
               />
 
               <div className="flex justify-end mb-3">
-                <p className="text-sm font-medium underline"><Link to='/'>Forgot Password?</Link></p>
+                <p className="text-sm font-medium underline">
+                  <Link to='/resetPassword'>Forgot Password?</Link>
+                </p>
               </div>
               
               <Button>Join</Button>
@@ -105,7 +113,7 @@ const LogIn = () => {
 
       <div className="text-center md:text-base text-sm mb-10">
         <p>By Signing up, you acknowledge that you have read </p>
-        <p>the <span className="underline">terms and conditions</span> and <span className="underline">privacy policy.</span></p>
+        <p>the <Link className="underline">terms and conditions</Link> and <Link className="underline">privacy policy.</Link></p>
       </div>
 
     </div>
