@@ -62,7 +62,7 @@ const Agenda = () => {
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
                                   </svg>
                                   <p className="">Virtual</p>
-                                  <svg class="w-6 h-6 text-gray-800 dark:text-white dark:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                  <svg class="w-6 h-6 text-gray-800 dark:text-white fill-gray-800 dark:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path stroke="currentColor" d="M315.4 15.5C309.7 5.9 299.2 0 288 0s-21.7 5.9-27.4 15.5l-96 160c-5.9 9.9-6.1 22.2-.4 32.2s16.3 16.2 27.8 16.2H384c11.5 0 22.2-6.2 27.8-16.2s5.5-22.3-.4-32.2l-96-160zM288 312V456c0 22.1 17.9 40 40 40H472c22.1 0 40-17.9 40-40V312c0-22.1-17.9-40-40-40H328c-22.1 0-40 17.9-40 40zM128 512a128 128 0 1 0 0-256 128 128 0 1 0 0 256z"/>
                                   </svg>
                                   <p className="">Challenges</p>
