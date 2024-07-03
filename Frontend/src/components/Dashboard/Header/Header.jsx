@@ -4,7 +4,7 @@ import profileImg from "../../../assets/images/dashboard-profile-example.png";
 
 const Header = () => {
     return (
-        <header className="bg-white py-4 shadow-md dark:bg-gray-900 dark:text-white">
+        <header className="bg-white py-4 shadow-md dark:bg-gray-900 dark:text-white dark:border-neutral-800">
         <div className="container mx-auto flex justify-between items-center">
             <div>
                 <div class="relative">

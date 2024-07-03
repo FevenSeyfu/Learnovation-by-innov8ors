@@ -9,7 +9,7 @@ const Agenda = () => {
   const { toggleRightSidebar } = useSidebar();
   const { isRightSidebarExpanded } = useSidebar();
   return (
-    <div className="h-screen border dark:bg-gray-900 dark:text-white">
+    <div className="h-screen border dark:bg-gray-900 dark:text-white dark:border-neutral-800">
         <button onClick={toggleRightSidebar}>
         {(!isRightSidebarExpanded) && (
             <div className="p-6">
