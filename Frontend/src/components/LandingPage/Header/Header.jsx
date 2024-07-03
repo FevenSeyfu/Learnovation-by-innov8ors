@@ -18,26 +18,31 @@ const Header = () => {
                           <Link to="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
                       </li>
                   </ul>
+                <nav className="flex items-center space-x-4">
+                    <ul className="flex space-x-4 text-sm md:text-lg font-medium items-center"> {/* Reduced font size on mobile */}
+                        <li>
+                            <Link to="/features" className="text-gray-700 hover:text-gray-900">Features</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
+                        </li>
+                    </ul>
 
-                  <ul className="flex space-x-8 text-lg font-medium items-center">
-
-                  </ul>
-
-                  <div className="flex items-center space-x-4"> {/* Increased spacing with space-x-8 */}
-                      <Link to="/signup"
+                    <div className="flex items-center space-x-4 px-1">
+                        <Link to="/signup"
                               className="bg-purple hover:opacity-95 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+
                           Sign Up
                       </Link>
                       <Link to="/login"
                               className="bg-lightOrange hover:bg-gray-100 text-gray-700 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             Log In
-                      </Link>
-                  </div>
-              </nav>
-          </div>
-      </header>
-  );
-
+                        </Link>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    );
 };
 
 export default Header;
