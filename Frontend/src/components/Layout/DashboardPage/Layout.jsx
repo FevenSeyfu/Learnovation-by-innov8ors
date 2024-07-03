@@ -5,6 +5,7 @@ import LeftSideBar from '../../Dashboard/Sidebar/LeftSideBar';
 import { useSidebar } from '../../../Context/SidebarContext';
 import ExpandedLeftSideBar from '../../Dashboard/Sidebar/ExpandedLeftSideBar';
 import Agenda from '../../Dashboard/Sidebar/Agenda';
+import ExploreHeader from '../../Explore/ExploreHeader';
 
 const Layout = () => {
   const { isLeftSidebarExpanded, isRightSidebarExpanded } = useSidebar();
@@ -24,6 +25,7 @@ const Layout = () => {
           <div className="flex flex-col flex-1 overflow-hidden">
             <Header />
             <main className="flex-1 overflow-y-auto">
+              <ExploreHeader />
               <Outlet />
             </main>
           </div>

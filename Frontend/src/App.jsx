@@ -11,12 +11,16 @@ import ResetPassword from "./Pages/Authentication/ResetPassword";
 import ResetPasswordTwo from "./Pages/Authentication/ResetPasswordTwo";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Onboarding from "./Pages/Onboarding/Onboarding";
+
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 import { SidebarProvider } from "./Context/SidebarContext";
+import { DropdownProvider } from "./Context/DropdownContext";
+
 import CourseDetail from "./Pages/Courses/CourseDetail";
 import Events from "./Pages/Events/Events";
 import Courses from "./Pages/Courses/Courses";
 import Mentors from "./Pages/Mentors/Mentors";
+
 
 function App() {
   return (
@@ -42,7 +46,16 @@ function App() {
             </OnboardingFormProvider>
           }
         />
-         <Route path="dashboard" element={<SidebarProvider><DashboardLayout /></SidebarProvider>}>
+        <Route
+          path="dashboard"
+          element={
+            <DropdownProvider>
+              <SidebarProvider>
+                <DashboardLayout />
+              </SidebarProvider>
+            </DropdownProvider>
+          }
+        >
           <Route index element={<Dashboard />} />
           <Route path="explore/courses" element={<Courses />} />
           <Route path="explore/events" element={<Events />} />

@@ -16,7 +16,7 @@ const FormStep = ({ step }) => {
 
   return (
     <div className="w-full flex flex-col gap-5">
-      <GradientPurpleHeading>{step.question}</GradientPurpleHeading>
+      <GradientPurpleHeading size={'semiBold'}>{step.question}</GradientPurpleHeading>
       {Object.entries(step.options).map(([key, value]) => (
         <div
           key={key}
