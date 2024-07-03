@@ -39,7 +39,7 @@ const SignUp = () => {
   });
 
   return (
-    <div>
+    <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20">
       
       <div className="md:mb-10 mb-5 md:mt-24 mt-20 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
         
@@ -116,7 +116,7 @@ const SignUp = () => {
 
       </div>
 
-      <div className="text-center md:text-base text-sm mb-10">
+      <div className="text-center md:text-base text-sm">
         <p>By Signing up, you acknowledge that you have read </p>
         <p>the <Link className="underline">terms and conditions</Link> and <Link className="underline">privacy policy.</Link></p>
       </div>

@@ -25,9 +25,9 @@ const ResetPassword = () => {
   });
 
   return (
-    <div>
+    <div className="bg-lightOrange md:pt-24 pt-40 md:pb-60 pb-80">
       
-      <div className="rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:mt-24 mt-40 md:w-6/12">
+      <div className="rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
         
         <div className=" h-full w-full bg-white pt-8 rounded-md">
         
