@@ -1,7 +1,7 @@
 import React from "react";
 import demoImg from "../../../assets/images/feature-courses.png";
-import TitleBtn from "../../utility/TitleBtn";
-import HeadingH1 from "../../utility/HeadingH1";
+import TitleBtn from "../../utility/Home/TitleBtn";
+import HeadingH1 from "../../utility/Home/HeadingH1";
 const HowItWorks = () => {
   return (
     <div className="px-[45px] md:px-[8%] flex flex-col gap-12 md:mt-20">
