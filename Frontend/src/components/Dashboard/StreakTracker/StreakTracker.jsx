@@ -83,12 +83,16 @@ function StreakTracker() {
                                         isSameMonth(day, today) ? "text-gray-900 dark:text-white" : "text-gray-400"
                                     }  ${
                                         isToday(day) && "bg-gradient-to-br from-violet-500 to-pink-500 text-white"
-                                    } ${isEqual(getDay(day), new Date(2024, 7, 2)) && "bg-gradient-to-br from-violet-500 to-pink-500 text-white"
+                                    } ${ //Hard code specific dates for streaks
+                                        isEqual(day, new Date(2024,6,2)) && "bg-gradient-to-br from-violet-500 to-pink-500 text-white"
+                                    } ${ //Hard code specific dates for streaks
+                                        isEqual(day, new Date(2024,6,1)) && "bg-gradient-to-br from-violet-500 to-pink-500 text-white"
                                     }`}
                                 >
                                     {format(day, "d")}
                                 </p>
                             </div>
+
                         );
                     })}
                 </div>
