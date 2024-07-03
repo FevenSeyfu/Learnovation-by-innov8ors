@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
-import { FaChevronLeft } from "react-icons/fa6";
-import { FaChevronRight } from "react-icons/fa6";
-import { format, addMonths, subMonths, startOfWeek, addDays, startOfMonth, endOfMonth, endOfWeek, isSameMonth, isToday } from 'date-fns';
-import { useDropdown } from '../../Context/DropdownContext';
+import React, { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  format,
+  addMonths,
+  subMonths,
+  startOfWeek,
+  addDays,
+  startOfMonth,
+  endOfMonth,
+  endOfWeek,
+  isSameMonth,
+  isSameDay,
+  isToday,
+  isWithinInterval,
+} from "date-fns";
+import { useDropdown } from "../../Context/DropdownContext";
 
-const Calendar = ({ id, label, options }) => {
-    const { dropdownStates, toggleDropdown } = useDropdown();
-    const isOpen = dropdownStates[id] || false;
+const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   const renderHeader = () => {
@@ -18,10 +28,12 @@ const Calendar = ({ id, label, options }) => {
           </div>
         </div>
         <div className="column col-center">
-          <span>{format(currentMonth, 'MMMM yyyy')}</span>
+          <span>{format(currentMonth, "MMMM yyyy")}</span>
         </div>
         <div className="column col-end" onClick={nextMonth}>
-          <div className="icon"><FaChevronRight /></div>
+          <div className="icon">
+            <FaChevronRight />
+          </div>
         </div>
       </div>
     );
@@ -29,7 +41,7 @@ const Calendar = ({ id, label, options }) => {
 
   const renderDays = () => {
     const days = ["Mo", "Tu", "We", "Th", "Fr", "Sat", "Su"];
-  
+
     return (
       <div className="flex flex-row items-center  text-center justify-center gap-2">
         {days.map((day, index) => (
@@ -49,21 +61,37 @@ const Calendar = ({ id, label, options }) => {
     const dateFormat = "d";
     const rows = [];
 
-    let days = [];
     let day = startDate;
     let formattedDate = "";
 
     while (day <= endDate) {
+      let days = [];
       for (let i = 0; i < 7; i++) {
         formattedDate = format(day, dateFormat);
         const cloneDay = day;
+        const isStart = selectedStartDate && isSameDay(day, selectedStartDate);
+        const isEnd = selectedEndDate && isSameDay(day, selectedEndDate);
+        const isRange =
+          isWithinInterval(day, {
+            start: selectedStartDate,
+            end: selectedEndDate,
+          });
+
         days.push(
           <div
-            className={`flex flex-row w-10 h-10 text-center items-center justify-center ${!isSameMonth(day, monthStart)
+          className={`flex flex-row w-10 h-10 text-center items-center justify-center ${
+            !isSameMonth(day, monthStart)
               ? "disabled"
-              : isToday(day) ? "bg-purple rounded-full" : ""}`}
+              : isStart || isEnd
+              ? "bg-purple rounded-full text-white"
+              : isRange && !isStart && !isEnd
+              ? "bg-lightPurple text-purple"
+              : isToday(day)
+              ? "text-blue-500"
+              : ""
+          }`}
             key={day}
-            onClick={() => onDateClick(cloneDay)}
+            onClick={() => onDateSelect(cloneDay)}
           >
             <span className="number">{formattedDate}</span>
           </div>
@@ -80,14 +108,10 @@ const Calendar = ({ id, label, options }) => {
     return <div className="body">{rows}</div>;
   };
 
-  const onDateClick = (day) => {
-    console.log(format(day, 'yyyy-MM-dd'));
-  };
-
   const nextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
-
+  
   const prevMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };

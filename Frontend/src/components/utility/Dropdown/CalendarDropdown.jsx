@@ -5,14 +5,25 @@ import Calendar from "../Calender";
 import { useDropdown } from "../../../Context/DropdownContext";
 
 const CalendarDropdown = ({ id, label, options }) => {
-    const { dropdownStates, toggleDropdown } = useDropdown();
-    const isOpen = dropdownStates[id] || false;
+  const { dropdownStates, toggleDropdown } = useDropdown();
+  const isOpen = dropdownStates[id] || false;
+
   const [selectedRange, setSelectedRange] = useState("All time");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
+  const handleDateSelect = (date, isStartDate) => {
+    if (isStartDate) {
+      setStartDate(date);
+      if (endDate && date > endDate) {
+        setEndDate(null);
+      }
+    } else {
+      setEndDate(date);
+    }
+  };
+
   const handleRangeSelect = (range) => {
-    // Update startDate and endDate based on the selected range
     setSelectedRange(range);
   };
 
@@ -58,19 +69,29 @@ const CalendarDropdown = ({ id, label, options }) => {
         </ul>
         <div className="flex flex-row">
           <div id="start-date">
-          <Calendar />
+            <Calendar
+              selectedStartDate={startDate}
+              selectedEndDate={endDate}
+              onDateSelect={(date) => handleDateSelect(date, true)}
+            />
           </div>
           <div id="end-date">
-          <Calendar />
+            <Calendar
+              selectedStartDate={startDate}
+              selectedEndDate={endDate}
+              onDateSelect={(date) => handleDateSelect(date, false)}
+            />
           </div>
         </div>
       </div>
       <div>
         <div id="start-endDate-output"></div>
         <div id="actions">
-            <ButtonSecondary color={'gray'} onClick={cancelSelection}>Cancel</ButtonSecondary>
-            <ButtonPrimary onClick={applySelection}>Apply</ButtonPrimary>
-      </div>
+          <ButtonSecondary size={'md'} color={"gray"} onClick={cancelSelection}>
+            Cancel
+          </ButtonSecondary>
+          <ButtonPrimary size={'md'} onClick={applySelection}>Apply</ButtonPrimary>
+        </div>
       </div>
     </div>
   );
