@@ -3,11 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../../../Context/SidebarContext";
 import hostImg from "../../../assets/images/host-example.png";
-import plansIcon from "../../../assets/images/plans.png";
 import sasImg from "../../../assets/images/agenda-img-sas.png";
-import calIcon from "../../../assets/images/calendar-icon.png";
-import locIcon from "../../../assets/images/location-icon.png";
-import catIcon from "../../../assets/images/category.png";
 
 const Agenda = () => {
   const { toggleRightSidebar } = useSidebar();
