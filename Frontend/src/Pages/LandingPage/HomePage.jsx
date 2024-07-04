@@ -6,7 +6,7 @@ import HowItWorks from '../../components/LandingPage/Home/HowItWorks.jsx';
 const HomePage = () => {
 
   return (
-    <div>
+    <div className="bg-lightOrange">
         <Hero />
         <Features />
         <HowItWorks />

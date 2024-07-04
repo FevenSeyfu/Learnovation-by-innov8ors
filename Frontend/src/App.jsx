@@ -7,6 +7,8 @@ import HomePage from "./Pages/LandingPage/HomePage";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Login from "./Pages/Authentication/Login";
 import SignUp from "./Pages/Authentication/SignUp";
+import ResetPassword from "./Pages/Authentication/ResetPassword";
+import ResetPasswordTwo from "./Pages/Authentication/ResetPasswordTwo";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
@@ -26,10 +28,11 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-
-        {/* Authentication  */}
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+          {/* Authentication  */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+          <Route path="/resetPasswordTwo" element={<ResetPasswordTwo />} />
 
         <Route
           path="/onboarding"
