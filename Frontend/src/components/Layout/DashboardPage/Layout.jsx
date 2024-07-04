@@ -24,10 +24,10 @@ const Layout = () => {
           )}
           <div className="flex flex-col flex-1 overflow-hidden">
             <Header />
-            <main className="flex-1 overflow-y-auto">
-              <ExploreHeader />
+            <div className="flex-1 overflow-y-auto">
+              {/* <ExploreHeader /> */}
               <Outlet />
-            </main>
+            </div>
           </div>
           <aside className={`overflow-y-auto  ${isRightSidebarExpanded ? ' w-[515px]' : 'w-20'}`}>
             <Agenda />

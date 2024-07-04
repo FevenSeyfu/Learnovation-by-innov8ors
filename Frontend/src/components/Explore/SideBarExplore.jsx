@@ -1,7 +1,7 @@
 import React from "react";
-import courseIcon from "../../assets/images/icon-courses.svg";
-import eventsIcon from "../../assets/images/icon-events.svg";
-import mentorsIcon from "../../assets/images/icon-mentors.svg";
+import courseIcon from "../../assets/images/icons/icon-courses.svg";
+import eventsIcon from "../../assets/images/icons/icon-events.svg";
+import mentorsIcon from "../../assets/images/icons/icon-mentors.svg";
 import { NavLink } from "react-router-dom";
 
 const SideBarExplore = () => {

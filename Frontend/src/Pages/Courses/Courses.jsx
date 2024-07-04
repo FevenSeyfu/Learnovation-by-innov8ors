@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import courseData from "../../data/courses.json";
-import CourseCard from "../../components/Explore/CourseCard";
+import CourseCard from "../../components/Course/CourseCard";
+import ExploreHeader from "../../components/Explore/ExploreHeader";
 const Courses = () => {
   const [courses, setCourses] = useState([]);
 
@@ -12,7 +13,9 @@ const Courses = () => {
       setCourses(courseData.courses);
   }, []);
   return (
-    <div class="w-full gap-4 grid grid-cols-3 px-8">
+   <main className="flex flex-col">
+      <ExploreHeader />
+     <div class="w-full gap-4 grid grid-cols-3 px-8">
       {courses.slice(0, 6).map((course) => (
         <CourseCard
           key={course.id}
@@ -30,6 +33,7 @@ const Courses = () => {
         />
       ))}
     </div>
+   </main>
   );
 };
 

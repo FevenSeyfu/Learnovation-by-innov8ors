@@ -1,5 +1,5 @@
 import React from "react";
-import searchIcon from "../../assets/images/icon-search.svg";
+import searchIcon from "../../assets/images/icons/icon-search.svg";
 
 import { useLocation } from "react-router-dom";
 import SecondHeader from "../Dashboard/Header/SecondHeader";

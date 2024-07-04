@@ -1,6 +1,6 @@
 import React from "react";
 import { useDropdown } from "../../../Context/DropdownContext";
-import arrowDownIcon from "../../../assets/images/icon-down-arrow.svg";
+import arrowDownIcon from "../../../assets/images/icons/icon-down-arrow.svg";
 import CalendarDropdown from "./CalendarDropdown";
 
 const Dropdown = ({ id, label, options }) => {

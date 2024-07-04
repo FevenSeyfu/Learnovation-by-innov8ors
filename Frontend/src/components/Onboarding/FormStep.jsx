@@ -1,7 +1,7 @@
 import React from "react";
 import { useOnboardingFormContext } from "../../Context/OnboardingFormContext";
 import GradientPurpleHeading from "../utility/Heading/GradientPurpleHeading";
-import checkedIcon from "../../assets/images/icon-checkmark.svg";
+import checkedIcon from "../../assets/images/icons/icon-checkmark.svg";
 
 const FormStep = ({ step }) => {
   const { state, dispatch } = useOnboardingFormContext();
