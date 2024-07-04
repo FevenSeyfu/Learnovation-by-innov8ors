@@ -9,8 +9,11 @@ export const DropdownProvider = ({ children }) => {
 
   const toggleDropdown = (id) => {
     setDropdownStates(prevStates => ({
-      ...prevStates,
-      [id]: !prevStates[id],
+      ...Object.keys(prevStates).reduce((acc, key) => {
+        acc[key] = false; 
+        return acc;
+      }, {}),
+      [id]: !prevStates[id]
     }));
   };
 

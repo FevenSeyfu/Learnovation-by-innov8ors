@@ -30,6 +30,20 @@ const ExploreHeader = () => {
     { label: "Networking", value: "networking" },
   ];
 
+  const countryOptions = [
+    { label: "United States", value: "us" },
+    { label: "Canada", value: "ca" },
+    { label: "United Kingdom", value: "uk" },
+    { label: "Australia", value: "au" },
+    { label: "India", value: "in" },
+  ];
+
+  const yrsofExpOptions = [
+    { label: "Less than 1 year", value: "0-1" },
+    { label: "1 to 3 years", value: "1-3" },
+    { label: "3 to 5 years", value: "3-5" },
+    { label: "More than 5 years", value: "5+" },
+  ];
   const location = useLocation();
   const getHeading = () => {
     if (location.pathname.includes("/explore/courses")) {
@@ -65,7 +79,7 @@ const ExploreHeader = () => {
         </form>
       );
     }
-    return null;
+    return <div className="flex-grow"></div>;
   };
 
   const renderDropdowns = () => {
@@ -76,15 +90,14 @@ const ExploreHeader = () => {
           <Dropdown id={'courseLevel'} label="Level" options={levelOptions} />
         </>
       );
-    } else if ("/explore/events") {
+    } else if (location.pathname.includes("/explore/events")) {
       return (
         <>
           <Dropdown id={'eventCategoryDropdown'} label="Category" options={eventOptions} />
           <Dropdown id={'dateDropDown'} label="Date" options={ ''} />
-          {/* Dropdown for Dates */}
         </>
       );
-    } else if ("/explore/mentors") {
+    } else if (location.pathname.includes("/explore/mentors")) {
       return (
         <>
           <Dropdown id={'countryDropdown'} label="Country" options={countryOptions} />
@@ -95,11 +108,11 @@ const ExploreHeader = () => {
   };
 
   return (
-    <header className="absolute  flex flex-col gap-4 px-14 py-4">
+    <header className="flex flex-col gap-4 px-14 py-4">
       <SecondHeader title={getHeading()} subtitle={'Oneliner'}/>
-      <div className=" flex flex-row justify-between">
+      <div className="flex flex-row justify-between">
         {renderSearchForm()}
-        <div className=" relative right-0  flex flex-row  gap-2">{renderDropdowns()}</div>
+        <div className="flex flex-row gap-2">{renderDropdowns()}</div>
       </div>
     </header>
   );
