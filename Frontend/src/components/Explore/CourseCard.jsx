@@ -26,23 +26,26 @@ const CourseCard = ({
     navigate(`/course/${id}`);
   };
   return (
-    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] flex flex-col gap-2">
+    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] flex flex-col gap-2 ">
       <img src={getImageURL(CourseImg)} alt="course image" />
+      <div className="max-h-8 overflow-hidden">
       <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"}>
           {courseName}
         </Typography>
+      </div>
       <div className="flex flex-col justify-end gap-2 flex-grow">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 ">
+          <div className="max-h-16 overflow-hidden">
           <Typography
             tag={"p"}
             weight={"regular"}
             size={"sm"}
             type={"text"}
             color="#667085"
-            lineNumbers={"3"}
           >
             {courseDescription}
-          </Typography>
+          </Typography>...
+          </div>
           <div className="flex flex-row flex-wrap items-center gap-2">
             <div className="flex flex-row items-center  gap-px">
               <img src={durationIcon} alt="duration icon" />
