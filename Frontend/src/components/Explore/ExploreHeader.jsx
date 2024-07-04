@@ -31,12 +31,23 @@ const ExploreHeader = () => {
   ];
 
   const countryOptions = [
-    { label: "United States", value: "us" },
-    { label: "Canada", value: "ca" },
-    { label: "United Kingdom", value: "uk" },
     { label: "Australia", value: "au" },
+    { label: "Brazil", value: "br" },
+    { label: "Canada", value: "ca" },
+    { label: "China", value: "cn" },
+    { label: "France", value: "fr" },
+    { label: "Germany", value: "de" },
     { label: "India", value: "in" },
+    { label: "Italy", value: "it" },
+    { label: "Japan", value: "jp" },
+    { label: "Mexico", value: "mx" },
+    { label: "Russia", value: "ru" },
+    { label: "South Africa", value: "za" },
+    { label: "South Korea", value: "kr" },
+    { label: "United Kingdom", value: "uk" },
+    { label: "United States", value: "us" }
   ];
+  
 
   const yrsofExpOptions = [
     { label: "Less than 1 year", value: "0-1" },

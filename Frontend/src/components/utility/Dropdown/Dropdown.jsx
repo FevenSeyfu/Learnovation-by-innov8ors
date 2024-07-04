@@ -34,11 +34,11 @@ const Dropdown = ({ id, label, options }) => {
         </div>
       )}
       {isOpen && label === "Country" && (
-        <div className="absolute z-10 text-[#667085] mt-2 p-4 bg-white border rounded-2xl w-[270px] shadow-lg overflow-y-scroll">
+        <div className="absolute z-10 text-[#667085] mt-2 bg-white border rounded-2xl w-[270px] shadow-lg overflow-y-scroll h-[200px]">
           {options.map((option) => (
             <div
               key={option.value}
-              className="pl-4"
+              className="pl-6 hover:bg-lightPurple hover:text-purple"
             >
               <span className="font-medium text-sm">{option.label}</span>
             </div>
