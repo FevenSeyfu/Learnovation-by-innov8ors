@@ -1,5 +1,6 @@
 import React from "react";
 import heroImg from "../../../assets/images/hero-img.png";
+import ButtonSm from "../../utility/Home/ButtonSm";
 import { useNavigate } from "react-router-dom";
 import ButtonCTA from "../../utility/Button/ButtonCTA";
 

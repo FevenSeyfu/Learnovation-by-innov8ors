@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/LandingPage/Layout";
+import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import NotFound from "./Pages/NotFound/NotFound";
 import HomePage from "./Pages/LandingPage/HomePage";
 import ContactUs from "./Pages/ContactUs/ContactUs";
@@ -9,7 +10,6 @@ import SignUp from "./Pages/Authentication/SignUp";
 import ResetPassword from "./Pages/Authentication/ResetPassword";
 import ResetPasswordTwo from "./Pages/Authentication/ResetPasswordTwo";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import DashboardLayout from "./components/Layout/DashboardPage/Layout";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 import { SidebarProvider } from "./Context/SidebarContext";
