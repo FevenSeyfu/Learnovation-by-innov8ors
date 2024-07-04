@@ -21,8 +21,8 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
 
   const renderHeader = () => {
     return (
-      <div className="flex flex-row items-center">
-        <div className="column col-start">
+      <div className="flex flex-row items-center justify-between px-4 mb-2 w-full ">
+        <div className="flex flex-row items-center">
           <div className="icon" onClick={prevMonth}>
             <FaChevronLeft />
           </div>
@@ -43,7 +43,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
     const days = ["Mo", "Tu", "We", "Th", "Fr", "Sat", "Su"];
 
     return (
-      <div className="flex flex-row items-center  text-center justify-center gap-2">
+      <div className="flex flex-row items-center text-sm  text-center justify-center ">
         {days.map((day, index) => (
           <div className="w-10 h-10" key={index}>
             {day}
@@ -79,7 +79,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
 
         days.push(
           <div
-          className={`flex flex-row w-10 h-10 text-center items-center justify-center ${
+          className={`flex flex-row w-10 h-10 text-sm text-center items-center justify-center ${
             !isSameMonth(day, monthStart)
               ? "disabled"
               : isStart || isEnd
@@ -99,7 +99,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
         day = addDays(day, 1);
       }
       rows.push(
-        <div className="flex flex-row items-center gap-2" key={day}>
+        <div className="flex flex-row items-center" key={day}>
           {days}
         </div>
       );
@@ -117,7 +117,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
   };
 
   return (
-    <div className="calendar">
+    <div className="flex flex-col w-full items-center p-4 border-r-2">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

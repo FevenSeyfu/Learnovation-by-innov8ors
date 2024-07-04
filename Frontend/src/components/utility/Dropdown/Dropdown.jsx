@@ -24,7 +24,7 @@ const Dropdown = ({ id, label, options }) => {
         ))}
       </div>
       ): (
-        <div className='absolute z-10 text-[#667085] right-10 mt-2 p-4 bg-white border rounded-2xl w-[850px] shadow-lg'>
+        <div className='absolute z-10 text-[#667085] right-10 mt-2 pl-2 pb-4 bg-white border rounded-2xl w-[850px] shadow-lg'>
           <CalendarDropdown />
         </div>
       )
