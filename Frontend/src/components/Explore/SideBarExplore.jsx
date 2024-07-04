@@ -14,7 +14,7 @@ const SideBarExplore = () => {
         <NavLink
           to={"/dashboard/explore/courses"}
           className={({ isActive }) =>
-            isActive ? "flex flex-row gap-2 rounded-lg px-6 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 px-6 py-2"
+            isActive ? "flex flex-row gap-2 rounded-lg text-left pl-4 pr-16 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 pl-4 pr-16 py-2"
           }
         >
           <img src={courseIcon} alt="course's icon" />
@@ -25,7 +25,7 @@ const SideBarExplore = () => {
         <NavLink
           to={"/dashboard/explore/events"}
           className={({ isActive }) =>
-            isActive ? "flex flex-row gap-2 rounded-lg px-6 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 px-6 py-2"
+            isActive ? "flex flex-row gap-2 rounded-lg text-left pl-4 pr-16 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 pl-4 pr-16 py-2"
           }
         >
           <img src={eventsIcon} alt="event's icon" />
@@ -36,7 +36,7 @@ const SideBarExplore = () => {
         <NavLink
           to={"/dashboard/explore/mentors"}
           className={({ isActive }) =>
-            isActive ? "flex flex-row gap-2 rounded-lg px-6 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 px-6 py-2"
+            isActive ? "flex flex-row gap-2 rounded-lg text-left pl-4 pr-16 py-2 bg-[#F2F4F7] " : "flex flex-row gap-2 pl-4 pr-16 py-2"
           }
         >
           <img src={mentorsIcon} alt="mentor's icon" />

@@ -18,7 +18,7 @@ const Layout = () => {
             <LeftSideBar />
           </aside>
           {isLeftSidebarExpanded && (
-            <aside className="overflow-y-auto w-[277px] mt-[72px]">
+            <aside className="overflow-y-auto w-auto  mt-[72px]">
               <ExpandedLeftSideBar />
             </aside>
           )}

@@ -119,7 +119,7 @@ const ExploreHeader = () => {
   };
 
   return (
-    <header className="flex flex-col gap-4 px-14 py-4">
+    <header className="flex flex-col gap-4 px-8 py-4">
       <SecondHeader title={getHeading()} subtitle={'Oneliner'}/>
       <div className="flex flex-row justify-between">
         {renderSearchForm()}
