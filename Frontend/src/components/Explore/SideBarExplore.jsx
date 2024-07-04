@@ -7,8 +7,7 @@ import { NavLink } from "react-router-dom";
 const SideBarExplore = () => {
   return (
     <ul
-      className="py-6 px-2 border font-inter font-medium text-base text-[#101828]"
-      style={{ height: "calc(100vh - 72px)" }}
+      className="py-6 px-2 border font-inter font-medium text-base text-[#101828] h-full"
     >
       <li>
         <NavLink

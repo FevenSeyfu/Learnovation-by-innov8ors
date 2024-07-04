@@ -12,7 +12,7 @@ const Layout = () => {
 
   return (
     <>
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-full">
         <div className="flex flex-1 overflow-hidden">
           <aside className="overflow-y-auto w-20">
             <LeftSideBar />

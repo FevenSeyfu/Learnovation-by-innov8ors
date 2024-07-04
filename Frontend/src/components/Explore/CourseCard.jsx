@@ -29,9 +29,9 @@ const CourseCard = ({
     <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] flex flex-col gap-2">
       <img src={getImageURL(CourseImg)} alt="course image" />
       <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"}>
-        {courseName}
-      </Typography>
-      <div className="flex flex-col gap-4">
+          {courseName}
+        </Typography>
+      <div className="flex flex-col justify-end gap-2 flex-grow">
         <div className="flex flex-col gap-2">
           <Typography
             tag={"p"}
@@ -39,12 +39,12 @@ const CourseCard = ({
             size={"sm"}
             type={"text"}
             color="#667085"
-            lineNumbers={'3'}
+            lineNumbers={"3"}
           >
             {courseDescription}
           </Typography>
-          <div className="flex flex-row items-center gap-2">
-            <div className="flex flex-row items-center whitespace-nowrap gap-1">
+          <div className="flex flex-row flex-wrap items-center gap-2">
+            <div className="flex flex-row items-center  gap-px">
               <img src={durationIcon} alt="duration icon" />
               <Typography
                 tag={"p"}
@@ -56,7 +56,7 @@ const CourseCard = ({
                 {duration}
               </Typography>
             </div>
-            <div className="flex flex-row items-center whitespace-nowrap gap-1">
+            <div className="flex flex-row items-center  gap-px">
               <img src={ratingIcon} alt="rating icon" />
               <Typography
                 tag={"p"}
@@ -68,7 +68,7 @@ const CourseCard = ({
                 {rating}
               </Typography>
             </div>
-            <div className="flex flex-row items-center whitespace-nowrap gap-1">
+            <div className="flex flex-row items-center  gap-px">
               <img src={levelIcon} alt="level icon" />
               <Typography
                 tag={"p"}
@@ -93,7 +93,7 @@ const CourseCard = ({
             </Typography>
           </div>
         </div>
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row flex-wrap justify-between items-center gap-y-2">
           <div className="flex flex-row items-center gap-2">
             <img
               src={getImageURL(instructorImage)}

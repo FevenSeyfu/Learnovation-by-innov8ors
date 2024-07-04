@@ -5,7 +5,7 @@ import Logo from "../../../assets/images/SimpleLogo.png";;
 
 const LeftSideBar = () => {
   return (
-    <div class="grid h-screen grid-rows-6 dark:bg-gray-900 dark:text-white border dark:border-neutral-800">
+    <div class="grid h-full grid-rows-6 dark:bg-gray-900 dark:text-white border dark:border-neutral-800">
       <div class="sidebar row-span-6">
         <ul>
           <li>
