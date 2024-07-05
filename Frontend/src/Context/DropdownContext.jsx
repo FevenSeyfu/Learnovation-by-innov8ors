@@ -6,6 +6,7 @@ export const useDropdown = () => useContext(DropdownContext);
 
 export const DropdownProvider = ({ children }) => {
   const [dropdownStates, setDropdownStates] = useState({});
+  const [selectedValues, setSelectedValues] = useState({});
 
   const toggleDropdown = (id) => {
     setDropdownStates(prevStates => ({
@@ -16,9 +17,15 @@ export const DropdownProvider = ({ children }) => {
       [id]: !prevStates[id]
     }));
   };
+  const updateSelectedValues = (id, values) => {
+    setSelectedValues(prevValues => ({
+      ...prevValues,
+      [id]: values
+    }));
+  };
 
   return (
-    <DropdownContext.Provider value={{ dropdownStates, toggleDropdown }}>
+    <DropdownContext.Provider value={{ dropdownStates, toggleDropdown, selectedValues, updateSelectedValues }}>
       {children}
     </DropdownContext.Provider>
   );
