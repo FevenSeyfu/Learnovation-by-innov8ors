@@ -4,9 +4,11 @@ import searchIcon from "../../assets/images/icons/icon-search.svg";
 import { useLocation } from "react-router-dom";
 import SecondHeader from "../Dashboard/Header/SecondHeader";
 import Dropdown from "../utility/Dropdown/Dropdown";
-import CalendarDropdown from "../utility/Dropdown/CalendarDropdown";
+import { useSearch } from "../../Context/SearchContext";
 
 const ExploreHeader = () => {
+
+const { searchTerm, updateSearchTerm } = useSearch();
   const courseOptions = [
     { label: "Business", value: "business" },
     { label: "Design", value: "design" },
@@ -67,6 +69,7 @@ const ExploreHeader = () => {
   };
 
   const renderSearchForm = () => {
+    
     if (
       location.pathname.includes("/explore/courses") ||
       location.pathname.includes("/explore/events")
@@ -85,6 +88,7 @@ const ExploreHeader = () => {
               placeholder="Search"
               className="block w-full p-2 pl-10 text-sm border border-zinc-200 rounded-lg bg-white focus:border-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
               required
+              onChange={(e) => updateSearchTerm(e.target.value)}
             />
           </div>
         </form>

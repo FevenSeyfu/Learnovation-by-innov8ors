@@ -2,18 +2,24 @@ import React, { useEffect, useState } from "react";
 import eventData from "../../data/events.json";
 import EventCard from "../../components/Event/EventCard";
 import ExploreHeader from "../../components/Explore/ExploreHeader";
+import { useSearch } from "../../Context/SearchContext";
 const Events = () => {
   const [events, setEvents] = useState([]);
+  const { searchTerm } = useSearch();
 
   useEffect(() => {
     fetch(eventData)
       setEvents(eventData.events);
   }, []);
+
+  const filteredEvents = events.filter(event =>
+    event.title.toLowerCase().includes(searchTerm)
+  );
   return (
    <main className="flex flex-col">
       <ExploreHeader />
      <div class="w-full gap-4 grid grid-cols-3 px-8">
-      {events.slice(0, 6).map((event) => (
+      {filteredEvents.slice(0, 6).map((event) => (
         <EventCard
           key={event.id}
           id={event.id}
