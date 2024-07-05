@@ -7,14 +7,15 @@
       "duration": "30 hours",
       "rating": 4.9,
       "level": "Intermediate",
+      "category" : "design",
       "learnersEnrolled": "400+",
       "language": "English",
       "lastUpdated": "2024-09-03",
       "courseType": "Self Pace",
       "isCompleted": false,
-      "img": "courses/image1",
+      "img": "courses/image1.png",
       "instructorName": "Emily Parker",
-      "instructorImg": "instructor/image1",
+      "instructorImg": "instructor/image1.png",
       "instructorRole": "Design director",
       "whatYouWillLearn": [
         "Understand the fundamental principles of graphic design",
@@ -125,14 +126,15 @@
       "duration": "40 hours",
       "rating": 4.8,
       "level": "Beginner",
+      "category" : "coding",
       "learnersEnrolled": "500+",
       "language": "English",
       "lastUpdated": "2024-08-15",
       "courseType": "Self Pace",
       "isCompleted": false,
-      "img": "courses/image2",
+      "img": "courses/image2.png",
       "instructorName": "John Doe",
-      "instructorImg": "instructor/image2",
+      "instructorImg": "instructor/image2.png",
       "instructorRole": "Senior Web Developer",
       "whatYouWillLearn": [
         "Basic HTML and HTML5",
@@ -239,14 +241,15 @@
       "duration": "50 hours",
       "rating": 4.7,
       "level": "Intermediate",
+      "category" : "it",
       "learnersEnrolled": "300+",
       "language": "English",
       "lastUpdated": "2024-07-22",
       "courseType": "Self Pace",
       "isCompleted": false,
-      "img": "courses/image3",
+      "img": "courses/image3.png",
       "instructorName": "Alice Johnson",
-      "instructorImg": "instructor/image3",
+      "instructorImg": "instructor/image3.png",
       "instructorRole": "Data Scientist",
       "whatYouWillLearn": [
         "Python for data science",
@@ -341,6 +344,352 @@
             {
               "title": "Portfolio Presentation",
               "project": "5 hours"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Digital Marketing Essentials",
+      "description": "This comprehensive course covers the fundamentals of digital marketing, including SEO, social media marketing, content marketing, and email marketing. Students will learn to create and implement effective marketing strategies to boost brand awareness and drive traffic.",
+      "duration": "35 hours",
+      "rating": 4.8,
+      "level": "Beginner",
+      "category" : "it",
+      "learnersEnrolled": "450+",
+      "language": "English",
+      "lastUpdated": "2024-06-30",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image1.png",
+      "instructorName": "Mark Thompson",
+      "instructorImg": "instructor/image3.png",
+      "instructorRole": "Marketing Strategist",
+      "whatYouWillLearn": [
+        "Understand the basics of SEO",
+        "Create effective social media marketing campaigns",
+        "Develop a content marketing strategy",
+        "Implement email marketing campaigns",
+        "Analyze and optimize marketing performance"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly marketing tasks",
+        "projects": "Two major marketing projects",
+        "portfolio": "Development of a marketing portfolio",
+        "finalExam": "Comprehensive exam on all topics covered",
+        "certification": "Digital Marketing Essentials certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to SEO",
+          "subtopics": [
+            {
+              "title": "SEO Basics",
+              "video": "40 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "30 minutes",
+              "assignment": "1 hour"
+            },
+            {
+              "title": "Advanced SEO Techniques",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Social Media Marketing",
+          "subtopics": [
+            {
+              "title": "Social Media Basics",
+              "video": "30 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Creating Engaging Content",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Content Marketing",
+          "subtopics": [
+            {
+              "title": "Developing a Content Strategy",
+              "video": "35 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Content Creation and Distribution",
+              "project": "3 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Email Marketing",
+          "subtopics": [
+            {
+              "title": "Email Marketing Fundamentals",
+              "video": "40 minutes"
+            },
+            {
+              "title": "Advanced Email Techniques",
+              "project": "4 hours",
+              "interactiveTutorial": "1 hour"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Marketing Analytics and Optimization",
+          "subtopics": [
+            {
+              "title": "Analyzing Marketing Performance",
+              "video": "1 hour",
+              "assignment": "4 hours"
+            },
+            {
+              "title": "Optimization Strategies",
+              "project": "8 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cybersecurity Basics",
+      "description": "Learn the fundamentals of cybersecurity, including network security, cryptography, and risk management. This course prepares students to identify and mitigate security threats in various digital environments.",
+      "duration": "45 hours",
+      "rating": 4.9,
+      "level": "Beginner",
+      "category" : "it",
+      "learnersEnrolled": "350+",
+      "language": "English",
+      "lastUpdated": "2024-05-25",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image3.png",
+      "instructorName": "Jane Williams",
+      "instructorImg": "instructor/image3.png",
+      "instructorRole": "Cybersecurity Expert",
+      "whatYouWillLearn": [
+        "Understand basic cybersecurity principles",
+        "Implement network security measures",
+        "Use cryptography to protect data",
+        "Conduct risk assessments",
+        "Develop a cybersecurity plan"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly cybersecurity exercises",
+        "projects": "Three major cybersecurity projects",
+        "portfolio": "Development of a cybersecurity portfolio",
+        "finalExam": "Comprehensive exam on cybersecurity topics",
+        "certification": "Cybersecurity Basics certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to Cybersecurity",
+          "subtopics": [
+            {
+              "title": "Cybersecurity Overview",
+              "video": "50 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "45 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Types of Cyber Threats",
+              "video": "40 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Network Security",
+          "subtopics": [
+            {
+              "title": "Network Security Basics",
+              "video": "30 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Advanced Network Security Techniques",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Cryptography",
+          "subtopics": [
+            {
+              "title": "Introduction to Cryptography",
+              "video": "35 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Implementing Cryptographic Methods",
+              "project": "4 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Risk Management",
+          "subtopics": [
+            {
+              "title": "Conducting Risk Assessments",
+              "video": "40 minutes"
+            },
+            {
+              "title": "Risk Mitigation Strategies",
+              "project": "4 hours",
+              "interactiveTutorial": "1.5 hours"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Developing a Cybersecurity Plan",
+          "subtopics": [
+            {
+              "title": "Creating a Cybersecurity Plan",
+              "video": "1 hour",
+              "assignment": "5 hours"
+            },
+            {
+              "title": "Implementing and Monitoring",
+              "project": "10 hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Project Management Professional (PMP) Prep",
+      "description": "Prepare for the PMP certification with this comprehensive course covering project management principles, methodologies, and best practices. Gain the skills and knowledge required to manage projects effectively and pass the PMP exam.",
+      "duration": "60 hours",
+      "rating": 4.7,
+      "level": "Advanced",
+      "category" : "it",
+      "learnersEnrolled": "200+",
+      "language": "English",
+      "lastUpdated": "2024-04-12",
+      "courseType": "Self Pace",
+      "isCompleted": false,
+      "img": "courses/image1.png",
+      "instructorName": "David Lee",
+      "instructorImg": "instructor/image2.png",
+      "instructorRole": "Project Manager",
+      "whatYouWillLearn": [
+        "Project management fundamentals",
+        "Agile and waterfall methodologies",
+        "Risk management and mitigation",
+        "Project scheduling and budgeting",
+        "Preparing for the PMP exam"
+      ],
+      "courseMaterials": {
+        "assignments": "Weekly project management exercises",
+        "projects": "Three major projects",
+        "portfolio": "Development of a project management portfolio",
+        "finalExam": "Comprehensive exam covering PMP topics",
+        "certification": "PMP Prep certificate"
+      },
+      "modules": [
+        {
+          "id": 1,
+          "title": "Project Management Fundamentals",
+          "subtopics": [
+            {
+              "title": "Introduction to Project Management",
+              "video": "60 minutes",
+              "project": "3 hours",
+              "interactiveTutorial": "1 hour",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Project Life Cycle",
+              "video": "45 minutes",
+              "project": "2 hours",
+              "interactiveTutorial": "1.5 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Project Planning and Scheduling",
+          "subtopics": [
+            {
+              "title": "Creating a Project Plan",
+              "video": "50 minutes",
+              "project": "2 hours"
+            },
+            {
+              "title": "Advanced Scheduling Techniques",
+              "assignment": "4 hours"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Risk Management",
+          "subtopics": [
+            {
+              "title": "Identifying Project Risks",
+              "video": "35 minutes",
+              "assignment": "2 hours"
+            },
+            {
+              "title": "Developing Risk Mitigation Strategies",
+              "project": "4 hours",
+              "assignment": "3 hours"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Agile Project Management",
+          "subtopics": [
+            {
+              "title": "Introduction to Agile",
+              "video": "45 minutes"
+            },
+            {
+              "title": "Implementing Agile Practices",
+              "project": "5 hours",
+              "interactiveTutorial": "2 hours"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "PMP Exam Preparation",
+          "subtopics": [
+            {
+              "title": "Exam Overview and Tips",
+              "video": "1.5 hours",
+              "assignment": "5 hours"
+            },
+            {
+              "title": "Practice Exam",
+              "project": "10 hours"
             }
           ]
         }

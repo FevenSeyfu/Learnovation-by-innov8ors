@@ -16,7 +16,7 @@ const ExpandedLeftSideBar = () => {
   
 
   return (
-    <div className=' '>
+    <div className='h-full'>
       {content}
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { useOnboardingFormContext } from "../../Context/OnboardingFormContext";
-import Heading from "./Heading";
-import checkedIcon from "../../assets/images/icon-checkmark.svg";
+import GradientPurpleHeading from "../utility/Heading/GradientPurpleHeading";
+import checkedIcon from "../../assets/images/icons/icon-checkmark.svg";
 
 const FormStep = ({ step }) => {
   const { state, dispatch } = useOnboardingFormContext();
@@ -16,7 +16,7 @@ const FormStep = ({ step }) => {
 
   return (
     <div className="w-full flex flex-col gap-5">
-      <Heading>{step.question}</Heading>
+      <GradientPurpleHeading size={'semiBold'}>{step.question}</GradientPurpleHeading>
       {Object.entries(step.options).map(([key, value]) => (
         <div
           key={key}
