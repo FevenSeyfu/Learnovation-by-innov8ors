@@ -7,7 +7,8 @@ export const useDropdown = () => useContext(DropdownContext);
 export const DropdownProvider = ({ children }) => {
   const [dropdownStates, setDropdownStates] = useState({});
   const [selectedValues, setSelectedValues] = useState({
-    dateRange: { startDate: null, endDate: null }
+    dateRange: { startDate: null, endDate: null },
+    country: '' 
   });
 
   const toggleDropdown = (id) => {
@@ -20,16 +21,21 @@ export const DropdownProvider = ({ children }) => {
     }));
   };
 
-  const updateSelectedValues = (id, values) => {
-    if (id === 'dateDropDown') {
+  const updateSelectedValues = (id, value) => {
+    if (id === 'countryDropdown') {
       setSelectedValues(prevValues => ({
         ...prevValues,
-        dateRange: values
+        country: value 
+      }));
+    } else if (id === 'dateDropDown') {
+      setSelectedValues(prevValues => ({
+        ...prevValues,
+        dateRange: value
       }));
     } else {
       setSelectedValues(prevValues => ({
         ...prevValues,
-        [id]: values
+        [id]: value
       }));
     }
   };

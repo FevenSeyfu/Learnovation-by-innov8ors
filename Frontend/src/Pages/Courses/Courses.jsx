@@ -8,7 +8,7 @@ import { useDropdown } from "../../Context/DropdownContext";
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const { searchTerm } = useSearch();
-  const { selectedValues } = useDropdown();
+  const { selectedValues,dropdownStates } = useDropdown();
 
   const selectedCategories = useMemo(() => selectedValues.courseCategory || [], [selectedValues.courseCategory]);
   const selectedLevels = useMemo(() => selectedValues.courseLevel || [], [selectedValues.courseLevel]);
@@ -22,10 +22,12 @@ const Courses = () => {
     (selectedCategories.length === 0 || selectedCategories.includes(course.category)) &&
     (selectedLevels.length === 0 || selectedLevels.includes(course.level.toLowerCase()))
   ), [courses, searchTerm, selectedCategories, selectedLevels]);
+
+  const isDropdownOpen = Object.values(dropdownStates).some(state => state);
   return (
     <main className="flex flex-col">
       <ExploreHeader />
-      <div className="w-full gap-4 grid grid-cols-3 px-8">
+      <div className={`w-full gap-4 grid grid-cols-3 px-8  ${isDropdownOpen && 'blur-sm'}`}>
         {filteredCourses.slice(0, 6).map((course) => (
           <CourseCard
             key={course.id}

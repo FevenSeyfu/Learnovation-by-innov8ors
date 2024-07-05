@@ -15,9 +15,16 @@ const Dropdown = ({ id, label, options }) => {
     setSelectedOptions(updatedSelectedOptions);
   };
 
+    const handleCountrySelect = (value) => {
+      updateSelectedValues(id, [value]);
+      toggleDropdown(id); 
+    };
+  
   useEffect(() => {
-    updateSelectedValues(id, selectedOptions);
-  }, [selectedOptions, id]);
+    if (label !== "Country") {
+      updateSelectedValues(id, selectedOptions);
+    }
+  }, [selectedOptions, id, label]);
 
   return (
     <div className="relative font-inter text-lg text-[#101828]">
@@ -54,7 +61,8 @@ const Dropdown = ({ id, label, options }) => {
               key={option.value}
               className="pl-6 hover:bg-lightPurple hover:text-purple"
             >
-              <span className="font-medium text-sm">{option.label}</span>
+              <span className="font-medium text-sm" 
+              onClick={() => handleCountrySelect(option.label)}>{option.label}</span>
             </div>
           ))}
         </div>

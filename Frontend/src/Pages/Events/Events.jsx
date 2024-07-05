@@ -9,7 +9,7 @@ import { parseISO, isWithinInterval } from 'date-fns';
 const Events = () => {
   const [events, setEvents] = useState([]);
   const { searchTerm } = useSearch();
-  const { selectedValues } = useDropdown();
+  const { selectedValues,dropdownStates } = useDropdown();
 
   const selectedCategories = useMemo(
     () => selectedValues.eventCategoryDropdown || [], 
@@ -23,15 +23,7 @@ const Events = () => {
     }), 
     [selectedValues.dateRange.startDate, selectedValues.dateRange.endDate]
   );
-  // Correctly fetch startDate and endDate from selectedValues.dateRange
-  // const dateRange = useMemo(
-  //   () => ({
-  //     startDate: selectedValues.dateRange.startDate,
-  //     endDate: selectedValues.dateRange.endDate
-  //   }), 
-  //   [selectedValues.dateRange.startDate, selectedValues.dateRange.endDate]
-  // );
- 
+
   useEffect(() => {
     setEvents(eventData.events);
   }, []);
@@ -49,11 +41,12 @@ const Events = () => {
     }), 
     [events, searchTerm, selectedCategories,selectedDateRange]
   );
- 
+  const isDropdownOpen = Object.values(dropdownStates).some(state => state);
+
   return (
     <main className="flex flex-col">
       <ExploreHeader />
-      <div className="w-full gap-4 grid grid-cols-3 px-8">
+      <div className={`w-full gap-4 grid grid-cols-3 px-8  ${isDropdownOpen && 'blur-sm'}`}>
         {filteredEvents.slice(0, 6).map((event) => (
           <EventCard
             key={event.id}

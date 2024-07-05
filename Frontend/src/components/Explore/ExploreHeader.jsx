@@ -33,21 +33,21 @@ const { searchTerm, updateSearchTerm } = useSearch();
   ];
 
   const countryOptions = [
-    { label: "Australia", value: "au" },
-    { label: "Brazil", value: "br" },
-    { label: "Canada", value: "ca" },
-    { label: "China", value: "cn" },
-    { label: "France", value: "fr" },
-    { label: "Germany", value: "de" },
-    { label: "India", value: "in" },
-    { label: "Italy", value: "it" },
-    { label: "Japan", value: "jp" },
-    { label: "Mexico", value: "mx" },
-    { label: "Russia", value: "ru" },
-    { label: "South Africa", value: "za" },
-    { label: "South Korea", value: "kr" },
-    { label: "United Kingdom", value: "uk" },
-    { label: "United States", value: "us" }
+    { label: "Australia", value: "Australia" },
+    { label: "Brazil", value: "Brazil" },
+    { label: "Canada", value: "Canada" },
+    { label: "China", value: "China" },
+    { label: "France", value: "France" },
+    { label: "Germany", value: "Germany" },
+    { label: "India", value: "India" },
+    { label: "Italy", value: "Italy" },
+    { label: "Japan", value: "Japan" },
+    { label: "Mexico", value: "Mexico" },
+    { label: "Russia", value: "Russia" },
+    { label: "South Africa", value: "South Africa" },
+    { label: "South Korea", value: "South Korea" },
+    { label: "United Kingdom", value: "UK" },
+    { label: "United States", value: "USA" }
   ];
   
 
@@ -57,6 +57,7 @@ const { searchTerm, updateSearchTerm } = useSearch();
     { label: "3 to 5 years", value: "3-5" },
     { label: "More than 5 years", value: "5+" },
   ];
+  
   const location = useLocation();
   const getHeading = () => {
     if (location.pathname.includes("/explore/courses")) {

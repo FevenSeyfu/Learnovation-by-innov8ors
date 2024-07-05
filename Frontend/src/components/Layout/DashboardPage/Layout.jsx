@@ -25,7 +25,6 @@ const Layout = () => {
           <div className="flex flex-col flex-1 overflow-hidden">
             <Header />
             <div className="flex-1 overflow-y-auto">
-              {/* <ExploreHeader /> */}
               <Outlet />
             </div>
           </div>
