@@ -7,9 +7,6 @@ const Events = () => {
 
   useEffect(() => {
     fetch(eventData)
-      .then((response) => response.json())
-      .then((data) => setEvents(data.events))
-      .catch((error) => console.error("Error fetching events:", error));
       setEvents(eventData.events);
   }, []);
   return (

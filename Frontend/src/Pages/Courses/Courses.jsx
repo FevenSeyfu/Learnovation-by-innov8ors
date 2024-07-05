@@ -7,9 +7,9 @@ const Courses = () => {
 
   useEffect(() => {
     fetch(courseData)
-      .then((response) => response.json())
-      .then((data) => setCourses(data.courses))
-      .catch((error) => console.error("Error fetching courses:", error));
+      // .then((response) => response.json())
+      // .then((data) => setCourses(data.courses))
+      // .catch((error) => console.error("Error fetching courses:", error));
       setCourses(courseData.courses);
   }, []);
   return (
