@@ -23,7 +23,7 @@ const CourseCard = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/course/${id}`);
+    navigate(`/dashboard/course/${id}`);
   };
   return (
     <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] flex flex-col gap-2 ">
