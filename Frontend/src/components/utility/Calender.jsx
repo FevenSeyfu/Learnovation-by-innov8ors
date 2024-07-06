@@ -117,7 +117,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
   };
 
   return (
-    <div className="flex flex-col w-full items-center p-4 border-r-2">
+    <div className="flex flex-col w-full items-center p-4 border-r dark:border-neutral-400">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

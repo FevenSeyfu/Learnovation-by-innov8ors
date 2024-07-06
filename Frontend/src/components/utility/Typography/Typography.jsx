@@ -53,7 +53,7 @@ const Typography = ({
   let lineNum = lineNumbers ? lineNumbers : "none";
   return (
     <Component
-      className={`font-inter line-clamp-${lineNum} ${colorClass} ${sizeClasses[size]} ${weightClasses[weight]}`}
+      className={`font-inter dark:text-gray-300 line-clamp-${lineNum} ${colorClass} ${sizeClasses[size]} ${weightClasses[weight]}`}
     >
       {children}
     </Component>

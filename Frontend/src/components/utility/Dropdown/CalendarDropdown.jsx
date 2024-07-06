@@ -58,8 +58,8 @@ const CalendarDropdown = ({ id }) => {
     <div className="flex flex-col">
       <div className="flex flex-row items-start justify-between">
         <DateRangeLinks onRangeSelect={onRangeSelect}/>
-        <div className="flex flex-row items-start border ">
-          <div id="start-date" >
+        <div className="flex flex-row items-start border dark:text-gray-200 dark:border-neutral-400">
+          <div id="start-date">
             <Calendar
               selectedStartDate={startDate}
               selectedEndDate={endDate}
@@ -75,14 +75,14 @@ const CalendarDropdown = ({ id }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between ml-[200px]  w-[638px] px-4">
+      <div className="flex flex-row items-center justify-between ml-[200px] w-[638px] px-4">
         <div id="start-endDate-output" className="flex flex-row items-center gap-3">
           <input 
             type="text" 
             name="start-date" 
             id="start-date" 
             placeholder={startDate ? format(new Date(startDate), 'MMM dd, yyyy') : format(new Date(), 'MMM dd, yyyy')}
-            className="w-32 h-10 font-inter placeholder:font-normal placeholder:text-base leading-6 placeholder:text-[#101828] border-2 rounded-lg outline-none text-center"
+            className="w-32 h-10 font-inter placeholder:font-normal placeholder:text-base leading-6 placeholder:text-[#101828] border-2 rounded-lg outline-none text-center dark:bg-gray-900 dark:text-white dark:border-neutral-400 dark:placeholder:text-neutral-400"
           />
           <span>-</span>
           <input 
@@ -90,7 +90,7 @@ const CalendarDropdown = ({ id }) => {
             name="end-date" 
             id="end-date" 
             placeholder={endDate ? format(new Date(endDate), 'MMM dd, yyyy') : format(new Date(), 'MMM dd, yyyy')}
-            className="w-32 h-10 font-inter placeholder:font-normal placeholder:text-base leading-6 placeholder:text-[#101828] border-2 rounded-lg outline-none text-center"
+            className="w-32 h-10 font-inter placeholder:font-normal placeholder:text-base leading-6 placeholder:text-[#101828] border-2 rounded-lg outline-none text-center dark:bg-gray-900 dark:text-white dark:border-neutral-400 dark:placeholder:text-neutral-400"
           />
         </div>
         <div id="actions" className="flex flex-row items-center gap-3">

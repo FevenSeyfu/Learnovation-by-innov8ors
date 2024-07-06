@@ -57,7 +57,7 @@ const DateRangeLinks = ({ onRangeSelect }) => {
       {['Today', 'Yesterday', 'This Week', 'Last Week', 'This Month', 'Last Month', 'This Year', 'Last Year', 'All time'].map(range => (
         <li key={range}>
           <button
-            className={`w-full text-left text-sm py-2 px-4 ${selectedRange === range ? 'bg-lightPurple text-purple' : ''}`}
+            className={`w-full text-left text-sm dark:text-white py-2 px-4 ${selectedRange === range ? 'bg-lightPurple text-purple dark:text-purple' : ''}`}
             onClick={(e) => handleButtonClick(e, range)}
           >
             {range}
