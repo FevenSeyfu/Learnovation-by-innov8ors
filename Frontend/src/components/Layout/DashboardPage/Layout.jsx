@@ -18,13 +18,13 @@ const Layout = () => {
             <LeftSideBar />
           </aside>
           {isLeftSidebarExpanded && (
-            <aside className="overflow-y-auto w-auto  mt-[72px]">
+            <aside className="overflow-y-auto w-auto  pt-[72px] bg-white dark:bg-gray-900 dark:text-white dark:border-neutral-800">
               <ExpandedLeftSideBar />
             </aside>
           )}
           <div className="flex flex-col flex-1 overflow-hidden">
             <Header />
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-y-auto bg-white dark:bg-gray-900 dark:text-white">
               <Outlet />
             </div>
           </div>

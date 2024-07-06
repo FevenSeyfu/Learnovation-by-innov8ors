@@ -36,7 +36,7 @@ const Dropdown = ({ id, label, options }) => {
         <img src={arrowDownIcon} alt="arrow down icon" />
       </div>
       {isOpen && label !== "Date" && label !== "Country" && (
-        <div className="absolute z-10 text-[#667085] mt-2 p-4 bg-white border rounded-2xl w-[270px] shadow-lg">
+        <div className="absolute z-10 text-[#667085]  mt-2 p-4 bg-white border rounded-2xl w-[270px] shadow-lg">
           {options.map((option) => (
             <div
               key={option.value}

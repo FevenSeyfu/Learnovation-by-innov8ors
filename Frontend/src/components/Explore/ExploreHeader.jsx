@@ -83,11 +83,12 @@ const { searchTerm, updateSearchTerm } = useSearch();
               alt="search icon"
               className="absolute left-[10px] top-1/2 -translate-y-1/2 pointer-events-none"
             />
+            
             <input
               type="search"
               id="default-search"
               placeholder="Search"
-              className="block w-full p-2 pl-10 text-sm border border-zinc-200 rounded-lg bg-white focus:border-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
+              className="block w-full p-2 pl-10 text-sm border border-zinc-200 rounded-lg bg-white focus:border-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-900 dark:border-slate-700 dark:placeholder-white dark:text-white focus:outline-none"
               required
               onChange={(e) => updateSearchTerm(e.target.value)}
             />
