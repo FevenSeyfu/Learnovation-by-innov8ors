@@ -16,17 +16,22 @@ function Dashboard() {
   ];
 
   return (
-    <div className="dashboard">
-      <h2>Continue Learning</h2>
-      {courses.map((course, index) => (
-        <CourseCard key={index} course={course} />
-      ))}
-      <h2>Recommendations for you</h2>
-      <div className="recommendations">
-        {recommendations.map((rec, index) => (
-          <RecommendationCard key={index} recommendation={rec} />
-        ))}
-      </div>
+    <div>
+        <div className="welcome">
+            <h1 id='welcome'>Welcome Sarah, to Learnovation</h1>
+        </div>
+        <div className="dashboard">
+            <p>Continue Learning</p>
+            {courses.map((course, index) => (
+                <CourseCard key={index} course={course} />
+            ))}
+            <h2>Recommendations for you</h2>
+            <div className="recommendations">
+                {recommendations.map((rec, index) => (
+                <RecommendationCard key={index} recommendation={rec} />
+                ))}
+            </div>
+        </div>
     </div>
   );
 }
