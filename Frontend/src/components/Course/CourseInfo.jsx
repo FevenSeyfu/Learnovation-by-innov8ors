@@ -7,11 +7,11 @@ import Typography from '../utility/Typography/Typography';
 const SkeletonLoader = () => (
   <div className="animate-pulse flex flex-col gap-4">
     <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-    <div className="h-6 bg-gray-300 rounded w-full"></div>
-    <div className="h-6 bg-gray-300 rounded w-full"></div>
-    <div className="h-6 bg-gray-300 rounded w-full"></div>
-    <div className="h-6 bg-gray-300 rounded w-full"></div>
-    <div className="h-24 bg-gray-300 rounded"></div>
+    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+    <div className="h-32 bg-gray-300 rounded"></div>
   </div>
 );
 
@@ -32,7 +32,7 @@ const CourseInfo = () => {
   }, [id]);
 
   if (!course) {
-    return <div className='p-4 border rounded-2xl flex flex-col gap-2'><SkeletonLoader /></div>; // Use SkeletonLoader here
+    return <div className='p-4 border rounded-2xl flex flex-col gap-2'><SkeletonLoader /></div>;
   }
 
   return (
