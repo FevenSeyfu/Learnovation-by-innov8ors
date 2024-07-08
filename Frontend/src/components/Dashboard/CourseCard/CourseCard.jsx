@@ -1,5 +1,5 @@
 import React from 'react';
-import image44 from '../../assets/image44.png';
+import image44 from 'src/assets/images/image44.png';
 
 function CourseCard({ course }) {
   return (
@@ -13,10 +13,9 @@ function CourseCard({ course }) {
           <br/>
           <p id='course-card-name'>{course.name}</p>
           <p id='course-lesson'>{course.lesson}</p>
-          {/*<div className="progress-bar">
+          <div className="progress-bar">
             <div className="progress" style={{ width: `${course.progress}%` }}></div>
           </div>
-          <span>{course.progress}%</span>*/}
         </div>
       </div>
       <div className="course-actions">

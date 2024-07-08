@@ -1,164 +1,181 @@
 .app {
-    display: flex;
-    font-family: 'Inter', sans-serif;
-  }
+  font-family: 'Inter', sans-serif;
+  display: flex;
+}
+
+.dashboard {
+  flex: 1;
+  width: Fill (1,568px)px;
+  height: Fill (973px)px;
+  padding: 0px 40px 0px 40px;
+  gap: 24px;
+  opacity: 0px;
+
+}
+
+.course-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #D0D5DD;
+  margin: 10px 0;
+  width: 150%;
+  height: 194px;
+  padding: 40px 0px 0px 0px;
+  gap: 16px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 1px 0px 0px 0px;
   
-  .dashboard {
-    flex: 1;
-    width: Fill (1,568px)px;
-    height: Fill (973px)px;
-    padding: 0px 40px 0px 40px;
-    gap: 24px;
-    opacity: 0px;
-  
-  }
-  
-  .course-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border: 1px solid #D0D5DD;
-    margin: 10px 0;
-    width: 100%;
-    height: 194px;
-    padding: 40px 0px 0px 0px;
-    gap: 16px;
-    border-radius: 8px;
-    opacity: 0px;
-    border: 1px 0px 0px 0px;
-    
-  }
-  
-  .course-info {
-    display: flex;
-  }
-  
-  .course-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-    margin-left: 20px;
-  }
-  
-  .course-category {
-    background: #FCFCFD;
-    width: 84px;
-    height: 24px;
-    padding: 0px 16px 0px 16px;
-    gap: 10px;
-    border-radius: 200px;
-    border: 1px solid #D0D5DD;
-    opacity: 0px;
-    font-size: 12px;
-    text-align: center;
-  }
-  
-  .progress-bar {
-    background-color: #f0f0f0;
-    height: 5px;
-    width: 100px;
-    margin: 10px 0;
-    position: relative;
-  }
-  
-  .progress {
-    background-color: #9c27b0;
-    height: 100%;
-    position: absolute;
-  }
-  
-  .course-actions {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .course-actions button {
-    margin-bottom: 10px;
-  }
-  
-  .tracker {
-    margin: 20px 0;
-  }
-  
-  .recommendations {
-    display: flex;
-  }
-  
-  .recommendation-card {
-    padding: 40px;
-    border: 1px solid #e0e0e0;
-    margin: 10px;
-    flex: 1;
-    border-radius: 8px;
-    border-color: #D0D5DD;
-  }
-  
-  .recommendation-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .resume-button{
-    width: 103px;
-    height: 48px;
-    padding: 12px 20px 12px 20px;
-    border-radius: 8px;
-    border-color: #602E93;
-    font-size: 16px;
-    background: #602E93;
-    font-weight: 600;
-  }
-  
-  .syllabus-button{
-    width: 150px;
-    height: 48px;
-    padding: 12px 20px 12px 20px;
-    border-radius: 8px;
-    border-color: #D0D5DD;
-    font-size: 16px;
-    background: #FFFFFF;
-    font-weight: 600;
-  }
-  
-  .welcome {
-    padding: 16px 40px 16px 40px;
-  }
-  
-  #active-learners {
-    font-family: 'inter', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.78px;
-    text-align: left;  
-  }
-  
-  #welcome { 
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    background: linear-gradient(90deg, #5663D9 0%, #AD72C2 56.57%, #C68CAD 99.99%, #FFB58A 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  #course-lesson {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    text-align: left;
-    margin-top: -10%;
-  }
-  
-  #course-card-name {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    text-align: left;
-    margin-top: 5%;
-  }
-  
-  #course-name {
-    margin: 10px 0;
-  }
+}
+
+.course-info {
+  display: flex;
+}
+
+.course-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.course-category {
+  color: #116B47;
+  background: #FCFCFD;
+  width: 84px;
+  height: 15px;
+  padding: 0px 16px 0px 16px;
+  border-radius: 200px;
+  border: 1px solid #D0D5DD;
+  opacity: 0px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.progress-bar {
+  background-color: #F4F4F4;
+  position: relative;
+  width: 180%;
+  height: 16px;  
+  border-radius: 200px;
+}
+
+.progress {
+  position: absolute;
+  width: 434.5px;
+  height: 16px;
+  border-radius: 200px;
+  background: linear-gradient(150.09deg, #8B15BD 0.04%, #F7936F 100.04%);
+}
+
+.course-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.course-actions button {
+  margin-bottom: 10px;
+}
+
+.tracker {
+  margin: 20px 0;
+}
+
+.recommendations {
+  display: flex;
+}
+
+.recommendation-card {
+  padding: 40px;
+  border: 1px solid #e0e0e0;
+  margin: 10px;
+  flex: 1;
+  border-radius: 8px;
+  border-color: #D0D5DD;
+}
+
+.recommendation-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-button{
+  width: 103px;
+  height: 48px;
+  padding: 12px 20px 12px 20px;
+  border-radius: 8px;
+  border-color: #602E93;
+  font-size: 16px;
+  background: #602E93;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.syllabus-button{
+  width: 150px;
+  height: 48px;
+  padding: 12px 20px 12px 20px;
+  border-radius: 8px;
+  border-color: #D0D5DD;
+  font-size: 16px;
+  background: #FFFFFF;
+  font-weight: 600;
+}
+
+.welcome {
+  padding: 16px 40px 16px 40px;
+}
+
+#active-learners {
+  font-family: 'inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;  
+  color: #101828;
+  margin-left: 2%;
+}
+
+#welcome { 
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background: linear-gradient(90deg, #5663D9 0%, #AD72C2 56.57%, #C68CAD 99.99%, #FFB58A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#course-lesson {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  margin-top: -10%;
+}
+
+#course-card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  margin-top: 5%;
+}
+
+#course-name {
+  margin: 10px 0;
+}
+
+#recommendation-hours{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: left;
+  color: #101828;
+  margin-left: 2%;
+}
