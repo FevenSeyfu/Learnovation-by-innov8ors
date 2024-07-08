@@ -4,7 +4,7 @@ import SetGoal from './SetGoal'
 
 const CourseInfoSidebar = () => {
   return (
-    <div className=' flex flex-col p-6' >
+    <div className='max-w-[300px] flex flex-col p-6 gap-8' >
         <CourseInfo />
         <SetGoal />
     </div>

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import coursesData from '../../data/courses.json';
-import certificateHidden from '../../assets/images/Certificates/certificateLocked.png';
-import Typography from '../utility/Typography/Typography';
-import { useDarkMode } from 'usehooks-ts';
-
+import React, {  useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import certificateHidden from "../../assets/images/Certificates/certificateLocked.png";
+import Typography from "../utility/Typography/Typography";
+import { useDarkMode } from "usehooks-ts";
+import { useCourseContext } from "../../Context/CourseContext";
+import ButtonCTA from "../utility/Button/ButtonCTA";
 
 const SkeletonLoader = () => (
   <div className="animate-pulse flex flex-col gap-4">
@@ -19,35 +19,36 @@ const SkeletonLoader = () => (
 
 const CourseInfo = () => {
   const { id } = useParams();
+  const { courses } = useCourseContext();
   const [course, setCourse] = useState(null);
-  const [isCompleted, setIsCompleted] = useState(false);
   const isDarkMode = useDarkMode();
 
   useEffect(() => {
-    const courseDetails = coursesData.courses.find(course => course.id === Number(id));
-
-    if (courseDetails) {
-      setCourse(courseDetails);
-      setIsCompleted(courseDetails.isCompleted);
-    } else {
-      console.log('Course not found');
-    }
-  }, [id]);
+    const selectedCourse = courses.find((course) => course.id === Number(id));
+    setCourse(selectedCourse);
+  }, [courses, id]);
 
   if (!course) {
-    return <div className='p-4 border rounded-2xl flex flex-col gap-2'><SkeletonLoader /></div>;
+    return (
+      <div className="p-4 border rounded-2xl flex flex-col gap-2">
+        <SkeletonLoader />
+      </div>
+    );
   }
 
+  const handleClaim = () => {
+    alert("Claim certificate");
+  };
   return (
-    <div className='p-4 border rounded-2xl flex flex-col gap-2'>
-      <div className='text-left flex flex-col gap-4'>
+    <div className="p-4 border rounded-2xl flex flex-col gap-2">
+      <div className="text-left flex flex-col gap-4">
         <div>
           <Typography
             tag={"p"}
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color={ isDarkMode ? "#fffff":"#667085"}
+            color={isDarkMode ? "#fffff" : "#667085"}
           >
             Language in
           </Typography>
@@ -56,7 +57,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color={ isDarkMode ? "#94a3b8":"#e5e7eb"} 
+            color={isDarkMode ? "#94a3b8" : "#e5e7eb"}
           >
             {course.language}
           </Typography>
@@ -67,7 +68,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color={ isDarkMode ? "#fffff":"#667085"}
+            color={isDarkMode ? "#fffff" : "#667085"}
           >
             Last Updated
           </Typography>
@@ -76,7 +77,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
+            color={isDarkMode ? "#94a3b8" : "#e5e7eb"}
           >
             {course.lastUpdated}
           </Typography>
@@ -87,7 +88,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color={ isDarkMode ? "#fffff":"#667085"}
+            color={isDarkMode ? "#fffff" : "#667085"}
           >
             Courses Type
           </Typography>
@@ -96,7 +97,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
+            color={isDarkMode ? "#94a3b8" : "#e5e7eb"}
           >
             {course.courseType}
           </Typography>
@@ -107,7 +108,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color={ isDarkMode ? "#fffff":"#667085"}
+            color={isDarkMode ? "#fffff" : "#667085"}
           >
             Enrolled
           </Typography>
@@ -116,7 +117,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
+            color={isDarkMode ? "#94a3b8" : "#e5e7eb"}
           >
             {course.learnersEnrolled}
           </Typography>
@@ -127,7 +128,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color={ isDarkMode ? "#fffff":"#667085"}
+            color={isDarkMode ? "#fffff" : "#667085"}
           >
             Certificate of Completion
           </Typography>
@@ -136,13 +137,18 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color={isCompleted ? "#1d9767" : '#fe2a45'}
+            color={course.isCompleted ? "#1d9767" : "#fe2a45"}
           >
-            {isCompleted ? 'Completed' : 'Locked'}
+            {course.isCompleted ? "Completed" : "Locked"}
           </Typography>
         </div>
       </div>
-      <img src={certificateHidden} alt="Certificate Preview" className='w-60'/>
+      <img src={certificateHidden} alt="Certificate Preview" className="w-60" />
+      <div className={`${!course.isComplete && 'hidden' }`}>
+        <ButtonCTA onClick={handleClaim} disabled={false}>
+          Claim
+        </ButtonCTA>
+      </div>
     </div>
   );
 };

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDropdown } from '../../../Context/DropdownContext';
 import arrowDownIcon from '../../../assets/images/icons/icon-down-arrow.svg';
 import CalendarDropdown from "./CalendarDropdown";
 
 const Dropdown = ({ id, label, options }) => {
-  const { dropdownStates, toggleDropdown, updateSelectedValues } = useDropdown();
+  const { dropdownStates, toggleDropdown, updateSelectedValues, updateDateSelection } = useDropdown();
   const isOpen = dropdownStates[id] || false;
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   const handleCheckboxChange = (value) => {
     const updatedSelectedOptions = selectedOptions.includes(value)
@@ -20,11 +22,22 @@ const Dropdown = ({ id, label, options }) => {
     toggleDropdown(id); 
   };
 
-  useEffect(() => {
-    if (label !== "Country") {
-      updateSelectedValues(id, selectedOptions);
+  const handleDateSelect = (date, isStartDate) => {
+    if (isStartDate) {
+      setStartDate(date);
+    } else {
+      setEndDate(date);
     }
-  }, [selectedOptions, id, label]);
+  };
+
+  const applyDateSelection = () => {
+    updateDateSelection( startDate, endDate);
+    toggleDropdown(id);
+  };
+
+  const cancelDateSelection = () => {
+    toggleDropdown(id);
+  };
 
   return (
     <div className="relative font-inter text-lg text-[#101828] dark:text-white">
@@ -68,8 +81,14 @@ const Dropdown = ({ id, label, options }) => {
         </div>
       )}
       {isOpen && label === "Date" && (
-        <div className="absolute z-10 text-[#667085] right-10 mt-2 pl-2 pb-4 bg-white border rounded-2xl w-[850px] shadow-lg dark:bg-gray-900 dark:border-neutral-800">
-          <CalendarDropdown />
+        <div className="absolute z-10 text-[#667085] right-10 mt-2 pl-2 pb-4  border rounded-2xl w-[850px] shadow-lg dark:bg-gray-900 dark:border-neutral-800">
+          <CalendarDropdown 
+            startDate={startDate}
+            endDate={endDate}
+            onDateSelect={handleDateSelect}
+            onApply={applyDateSelection}
+            onCancel={cancelDateSelection}
+          />
         </div>
       )}
     </div>

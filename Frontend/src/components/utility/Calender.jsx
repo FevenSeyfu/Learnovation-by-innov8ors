@@ -83,9 +83,9 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
             !isSameMonth(day, monthStart)
               ? "disabled"
               : isStart || isEnd
-              ? "bg-purple rounded-full text-white"
+              ? "bg-purple rounded-full text-white "
               : isRange && !isStart && !isEnd
-              ? "bg-lightPurple text-purple"
+              ? "bg-lightPurple text-purple "
               : isToday(day)
               ? "text-blue-500"
               : ""

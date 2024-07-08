@@ -50,11 +50,9 @@ function App() {
         <Route
           path="dashboard"
           element={
-            <DropdownProvider>
               <SidebarProvider>
                 <DashboardLayout />
               </SidebarProvider>
-            </DropdownProvider>
           }
         >
           <Route index element={<Dashboard />} />
