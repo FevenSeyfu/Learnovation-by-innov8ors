@@ -6,6 +6,7 @@ import Typography from "../utility/Typography/Typography";
 import ButtonPrimary from "../utility/Button/ButtonPrimary";
 import { useNavigate } from "react-router-dom";
 import getImageURL from "../../utils/getImages-utils";
+import { useDarkMode } from "usehooks-ts";
 
 const CourseCard = ({
   id,
@@ -21,7 +22,7 @@ const CourseCard = ({
   instructorImage,
 }) => {
   const navigate = useNavigate();
-
+  const isDarkMode = useDarkMode();
   const handleClick = () => {
     navigate(`/dashboard/course/${id}`);
   };

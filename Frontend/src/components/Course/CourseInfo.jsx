@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import coursesData from '../../data/courses.json';
 import certificateHidden from '../../assets/images/Certificates/certificateLocked.png';
 import Typography from '../utility/Typography/Typography';
+import { useDarkMode } from 'usehooks-ts';
+
 
 const SkeletonLoader = () => (
   <div className="animate-pulse flex flex-col gap-4">
@@ -19,6 +21,7 @@ const CourseInfo = () => {
   const { id } = useParams();
   const [course, setCourse] = useState(null);
   const [isCompleted, setIsCompleted] = useState(false);
+  const isDarkMode = useDarkMode();
 
   useEffect(() => {
     const courseDetails = coursesData.courses.find(course => course.id === Number(id));
@@ -44,7 +47,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color="#667085"
+            color={ isDarkMode ? "#fffff":"#667085"}
           >
             Language in
           </Typography>
@@ -53,7 +56,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color="#101828"
+            color={ isDarkMode ? "#94a3b8":"#e5e7eb"} 
           >
             {course.language}
           </Typography>
@@ -64,7 +67,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color="#667085"
+            color={ isDarkMode ? "#fffff":"#667085"}
           >
             Last Updated
           </Typography>
@@ -73,7 +76,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color="#101828"
+            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
           >
             {course.lastUpdated}
           </Typography>
@@ -84,7 +87,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color="#667085"
+            color={ isDarkMode ? "#fffff":"#667085"}
           >
             Courses Type
           </Typography>
@@ -93,7 +96,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color="#101828"
+            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
           >
             {course.courseType}
           </Typography>
@@ -104,7 +107,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color="#667085"
+            color={ isDarkMode ? "#fffff":"#667085"}
           >
             Enrolled
           </Typography>
@@ -113,7 +116,7 @@ const CourseInfo = () => {
             weight={"regular"}
             size={"md"}
             type={"text"}
-            color="#101828"
+            color={ isDarkMode ? "#94a3b8":"#e5e7eb"}
           >
             {course.learnersEnrolled}
           </Typography>
@@ -124,7 +127,7 @@ const CourseInfo = () => {
             weight={"medium"}
             size={"xs"}
             type={"text"}
-            color="#667085"
+            color={ isDarkMode ? "#fffff":"#667085"}
           >
             Certificate of Completion
           </Typography>
