@@ -1,12 +1,11 @@
 import React from "react";
-import durationIcon from "../../assets/images/icons/icon-duration.svg";
-import ratingIcon from "../../assets/images/icons/icon-rating.svg";
-import levelIcon from "../../assets/images/icons/icon-level.svg";
 import Typography from "../utility/Typography/Typography";
 import ButtonPrimary from "../utility/Button/ButtonPrimary";
 import { useNavigate } from "react-router-dom";
 import getImageURL from "../../utils/getImages-utils";
 import { useDarkMode } from "usehooks-ts";
+import  CourseMeta  from "./CourseMeta";
+import Instructor from "./Instructor";
 
 const CourseCard = ({
   id,
@@ -30,61 +29,35 @@ const CourseCard = ({
     <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] dark:bg-gray-900 dark:text-white dark:border-neutral-400 flex flex-col gap-2 ">
       <img src={getImageURL(CourseImg)} alt="course image" />
       <div className="max-h-8 overflow-hidden">
-      <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"} color="#101828" className="dark:text-white">
+        <Typography
+          tag={"h2"}
+          weight={"semiBold"}
+          size={"lg"}
+          type={"text"}
+          color="#101828"
+          className="dark:text-white"
+        >
           {courseName}
         </Typography>
       </div>
       <div className="flex flex-col justify-end gap-2 flex-grow">
         <div className="flex flex-col gap-2 ">
           <div className="max-h-16 overflow-hidden">
-          <Typography
-            tag={"p"}
-            weight={"regular"}
-            size={"sm"}
-            type={"text"}
-            color="#667085"
-          >
-            {courseDescription}
-          </Typography>...
+            <Typography
+              tag={"p"}
+              weight={"regular"}
+              size={"sm"}
+              type={"text"}
+              color="#667085"
+            >
+              {courseDescription}
+            </Typography>
+            ...
           </div>
-          <div className="flex flex-row flex-wrap items-center gap-2">
-            <div className="flex flex-row items-center  gap-px">
-              <img src={durationIcon} alt="duration icon" />
-              <Typography
-                tag={"p"}
-                weight={"normal"}
-                size={"xs"}
-                type={"text"}
-                color="#667085"
-              >
-                {duration}
-              </Typography>
-            </div>
-            <div className="flex flex-row items-center  gap-px">
-              <img src={ratingIcon} alt="rating icon" />
-              <Typography
-                tag={"p"}
-                weight={"normal"}
-                size={"xs"}
-                type={"text"}
-                color="#667085"
-              >
-                {rating}
-              </Typography>
-            </div>
-            <div className="flex flex-row items-center  gap-px">
-              <img src={levelIcon} alt="level icon" />
-              <Typography
-                tag={"p"}
-                weight={"normal"}
-                size={"xs"}
-                type={"text"}
-                color="#667085"
-              >
-                {level}
-              </Typography>
-            </div>
+          <div  className="flex flex-row flex-wrap items-center gap-2">
+            <CourseMeta duration={duration} rating={rating} level={level} />
           </div>
+
           <div className="learners-enrolled-Typography">
             <Typography
               tag={"p"}
@@ -99,31 +72,7 @@ const CourseCard = ({
         </div>
         <div className="flex flex-row flex-wrap justify-between items-center gap-y-2">
           <div className="flex flex-row items-center gap-2">
-            <img
-              src={getImageURL(instructorImage)}
-              alt="instructor"
-              className="rounded-full w-10 h-10"
-            />
-            <div>
-              <Typography
-                tag={"h3"}
-                weight={"normal"}
-                size={"xs"}
-                type={"text"}
-                color="#101828"
-              >
-                {instructorName}
-              </Typography>
-              <Typography
-                tag={"p"}
-                weight={"normal"}
-                size={"xs"}
-                type={"text"}
-                color="#667085"
-              >
-                {instructorRole}
-              </Typography>
-            </div>
+          <Instructor instructorImage={instructorImage} instructorName={instructorName} instructorRole={instructorRole}/>
           </div>
           <ButtonPrimary size={"sm"} onClick={handleClick}>
             Enroll

@@ -8,14 +8,12 @@ import { DropdownProvider } from "./Context/DropdownContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    
     <CourseProvider>
-    <DropdownProvider>
-      <SearchProvider>
-        <App />
-      </SearchProvider>
-    </DropdownProvider>
+      <DropdownProvider>
+        <SearchProvider>
+          <App />
+        </SearchProvider>
+      </DropdownProvider>
     </CourseProvider>
-    
   </React.StrictMode>
 );

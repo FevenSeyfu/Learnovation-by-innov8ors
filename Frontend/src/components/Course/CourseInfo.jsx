@@ -22,7 +22,7 @@ const CourseInfo = () => {
   const { courses } = useCourseContext();
   const [course, setCourse] = useState(null);
   const isDarkMode = useDarkMode();
-
+  
   useEffect(() => {
     const selectedCourse = courses.find((course) => course.id === Number(id));
     setCourse(selectedCourse);
