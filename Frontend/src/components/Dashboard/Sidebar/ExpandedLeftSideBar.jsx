@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import SideBarModule from '../../Course/SideBarModule';
 import SideBarExplore from '../../Explore/SideBarExplore';
+import CourseInfoSidebar from '../../Course/CourseInfoSidebar';
 
 const ExpandedLeftSideBar = () => {
   const location = useLocation();
@@ -9,14 +9,14 @@ const ExpandedLeftSideBar = () => {
   if (location.pathname.includes('/explore')) {
     content = <SideBarExplore />;
   } else if (/^\/dashboard\/course\/\d+$/.test(location.pathname)) {
-    content = <SideBarModule />;
+    content = <CourseInfoSidebar />
   } else {
     content = <div>No sidebar content available for this route.</div>;
   }
   
 
   return (
-    <div className='h-full'>
+    <div className='h-full '>
       {content}
     </div>
   );

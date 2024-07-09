@@ -83,9 +83,9 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
             !isSameMonth(day, monthStart)
               ? "disabled"
               : isStart || isEnd
-              ? "bg-purple rounded-full text-white"
+              ? "bg-purple rounded-full text-white "
               : isRange && !isStart && !isEnd
-              ? "bg-lightPurple text-purple"
+              ? "bg-lightPurple text-purple "
               : isToday(day)
               ? "text-blue-500"
               : ""
@@ -117,7 +117,7 @@ const Calendar = ({ selectedStartDate, selectedEndDate, onDateSelect }) => {
   };
 
   return (
-    <div className="flex flex-col w-full items-center p-4 border-r-2">
+    <div className="flex flex-col w-full items-center p-4 border-r dark:border-neutral-400">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

@@ -5,7 +5,7 @@ const SecondHeader = ({ title, subtitle }) => {
   return (
     <div className="flex flex-col items-start" id="titles">
       <GradientPurpleHeading size={"bold"}>{title}</GradientPurpleHeading>
-      <p className="font-inter font-bold text-lg text-[#344054]">{subtitle}</p>
+      <p className="font-inter font-bold text-lg text-[#344054] dark:text-white">{subtitle}</p>
     </div>
   );
 };

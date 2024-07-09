@@ -1,4 +1,5 @@
 import React from "react";
+import { useDarkMode } from "usehooks-ts"; // Correct import from usehooks-ts
 
 const Typography = ({
   tag,
@@ -6,9 +7,14 @@ const Typography = ({
   weight,
   type,
   children,
-  color = "#101828",
+  color,
   lineNumbers,
 }) => {
+  const isDarkMode = useDarkMode(); // Assuming useDarkMode returns a boolean
+
+  const defaultColor = isDarkMode ? "#FFFFFF" : "#101828";
+  const textColor = color || defaultColor;
+
   const weightClasses = {
     regular: "font-normal",
     medium: "font-medium",
@@ -48,12 +54,11 @@ const Typography = ({
       xs: "text-xs",
     };
   }
-
-  const colorClass = `text-[${color}]`;
   let lineNum = lineNumbers ? lineNumbers : "none";
   return (
     <Component
-      className={`font-inter line-clamp-${lineNum} ${colorClass} ${sizeClasses[size]} ${weightClasses[weight]}`}
+      style={{ color: textColor }}
+      className={`font-inter  line-clamp-${lineNum} ${sizeClasses[size]} ${weightClasses[weight]}`}
     >
       {children}
     </Component>
