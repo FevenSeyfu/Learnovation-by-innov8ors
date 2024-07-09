@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TextInput from '../../components/utility/textInput';
 import Button from '../../components/utility/button';
 import ThirdPartyButton from '../../components/utility/thirdPartyButton';
@@ -25,6 +25,7 @@ const SignUpSchema = Yup.object().shape({
 })
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const {values, handleChange, handleSubmit, errors} = useFormik({
     initialValues: {
       name: '',
@@ -34,10 +35,11 @@ const SignUp = () => {
     validationSchema:SignUpSchema,
     onSubmit: values => {
       // alert(JSON.stringify(values));
-      console.log(values);
     },
   });
-
+ const  handleSignup = () => {
+  navigate('/onboarding')
+ }
   return (
     <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20">
       
@@ -72,7 +74,7 @@ const SignUp = () => {
                 value={values.password}
               />
               
-              <Button>Join</Button>
+              <Button onClick={handleSignup}>Join</Button>
 
               <div className="flex justify-end">
                 <p className="text-sm font-semibold">Already have an account? <Link to='/login'>Login</Link></p>

@@ -61,7 +61,7 @@ function App() {
           <Route path="explore/events" element={<Events />} />
           <Route path="explore/mentors" element={<Mentors />} />
           <Route path="course/:id" element={<CourseDetailPage />} />
-          <Route path="/dashboard/course/:id/enrolled" element={<CourseEnrolled />} />
+          <Route path="course/:id/enrolled" element={<CourseEnrolled />} />
         </Route>
       </Routes>
     </BrowserRouter>

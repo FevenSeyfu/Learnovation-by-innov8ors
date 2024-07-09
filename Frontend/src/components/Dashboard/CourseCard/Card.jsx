@@ -13,7 +13,7 @@ function CourseCard({ course }) {
     navigate(`/dashboard/course/${course.id}`);
   }
   const handleResume = () =>{
-    navigate(`/dashboard/course/${id}/enrolled`);
+    navigate(`/dashboard/course/${course.id}/enrolled`);
   }
   return (
     <div className="flex flex-row font-inter items-start gap-4 p-10 border-2 rounded-lg">
@@ -54,7 +54,7 @@ function CourseCard({ course }) {
             </div>
           </div>
           <div className="flex flex-row gap-2">
-            <ButtonSecondary size={"2xl"} color={"gray"} onClick={handleViewSyllabus}>
+            <ButtonSecondary size={"lg"} color={"gray"} onClick={handleViewSyllabus}>
               View Syllabus
             </ButtonSecondary>
             <ButtonPrimary size={"lg"} onClick={handleResume}>
