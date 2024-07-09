@@ -17,7 +17,7 @@ function RecommendationCard({ recommendation }) {
           color="#116B47"
           className="dark:text-white"
         >
-          Business
+          {recommendation.category}
         </Typography>
         <div className="flex flex-col gap-px">
         <Typography
@@ -25,8 +25,7 @@ function RecommendationCard({ recommendation }) {
           weight={"medium"}
           size={"xs"}
           type={"display"}
-          color="#000"
-          className="dark:text-white"
+          color={isDarkMode ? "#fffff" : "#000"}
         >
           {recommendation.name}
         </Typography>

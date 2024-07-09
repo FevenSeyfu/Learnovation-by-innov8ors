@@ -3,17 +3,18 @@ import GradientPurpleHeading from "../../components/utility/Heading/GradientPurp
 import CourseCard from "../../components/Dashboard/CourseCard/Card";
 import RecommendationCard from "../../components/Dashboard/Recommendation/RecommendationCard";
 import Typography from "../../components/utility/Typography/Typography";
+import StreakTracker from "../../components/Dashboard/StreakTracker/StreakTracker";
 
 const DashboardPage = () => {
    const courses = [
-    { name: 'Course Name', lesson: 'Name of Lesson', progress: 36 },
-    { name: 'Course Name', lesson: 'Name of Lesson', progress: 4 },
-    { name: 'Course Name', lesson: 'Name of Lesson', progress: 50 },
+    {id:1, name: 'Course Name', lesson: 'Name of Lesson', progress: 36 },
+    {id:2, name: 'Course Name', lesson: 'Name of Lesson', progress: 4 },
+    {id:3, name: 'Course Name', lesson: 'Name of Lesson', progress: 50 },
   ];
 
   const recommendations = [
-    { name: 'Course Name', learners: 20, hours: 5 },
-    { name: 'Course Name', learners: 20, hours: 5 },
+    {id:4, name: 'Course Name', learners: 20, hours: 5,category: 'Business' },
+    {id:5, name: 'Course Name', learners: 20, hours: 5,category: 'Business' },
   ];
   return (
     <div className="flex flex-col  items-start p-10">
@@ -25,11 +26,14 @@ const DashboardPage = () => {
           Continue Learning
         </p>
       </header>
-      <div className="py-4">
+     <div className="w-full flex flex-row items-start justify-between">
+     <div className="py-4 w-full flex flex-col gap-6">
       {courses.map((course, index) => (
         <CourseCard key={index} course={course} />
       ))}
       </div>
+      <StreakTracker />
+     </div>
       <div className="flex flex-col items-start gap-4 pt-4">
       <Typography
           tag={"h2"}

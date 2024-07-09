@@ -1,23 +1,81 @@
-import React from 'react';
+import React from "react";
+import Typography from "../../utility/Typography/Typography";
+import { useDarkMode } from "usehooks-ts";
+import ButtonSecondary from "../../utility/Button/ButtonSecondary";
+import ButtonPrimary from "../../utility/Button/ButtonPrimary";
+import { useNavigate } from "react-router-dom";
 
 function CourseCard({ course }) {
+  const navigate = useNavigate();
+  const isDarkMode = useDarkMode();
+
+  const handleViewSyllabus = () =>{
+    navigate(`/dashboard/course/${course.id}`);
+  }
+  const handleResume = () =>{
+    navigate(`/dashboard/course/${id}/enrolled`);
+  }
   return (
-    <div className="flex justify-between p-5 border border-gray-300 my-2.5">
-      <div className="flex">
-        <div className="w-12 h-12 bg-gray-400 mr-5">Image</div>
-        <div>
-          <span className="bg-gray-300 py-1.25 px-1.25 rounded-md">Business</span>
-          <h3>{course.name}</h3>
-          <p>{course.lesson}</p>
-          <div className="bg-gray-200 h-1 w-25 my-2.5 relative">
-            <div className="bg-purple-700 h-full absolute" style={{ width: `${course.progress}%` }}></div>
+    <div className="flex flex-row font-inter items-start gap-4 p-10 border-2 rounded-lg">
+      <img src={course.Img} alt="" className="w-12 h-12 rounded-full border" />
+      <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-row justify-between">
+          <div>
+            <div className="bg-white dark:bg-gray-900 dark:text-white dark:border-neutral-800">
+            <Typography
+              tag={"span"}
+              weight={"medium"}
+              size={"xs"}
+              type={"text"}
+              color={isDarkMode ? "#fffff" : "#116B47"}
+            >
+              {course.category}
+            </Typography>
+            </div>
+            <div className="flex flex-col gap-px">
+              <Typography
+                tag={"h3"}
+                weight={"medium"}
+                size={"xs"}
+                type={"display"}
+                color="#000"
+                className="dark:text-white"
+              >
+                {course.name}
+              </Typography>
+              <Typography
+                tag={"span"}
+                weight={"medium"}
+                size={"sm"}
+                type={"text"}
+                color={isDarkMode ? "#fffff" : "#667085"}
+              >
+                {course.lesson}
+              </Typography>
+            </div>
           </div>
-          <span>{course.progress}%</span>
+          <div className="flex flex-row gap-2">
+            <ButtonSecondary size={"2xl"} color={"gray"} onClick={handleViewSyllabus}>
+              View Syllabus
+            </ButtonSecondary>
+            <ButtonPrimary size={"lg"} onClick={handleResume}>
+              Resume
+            </ButtonPrimary>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col">
-        <button className="mb-2.5">View Syllabus</button>
-        <button>Resume</button>
+        <div className="w-full flex flex-row justify-center gap-4 items-center">
+          <div className="w-full h-4 bg-[#F4F4F4] rounded-full overflow-hidden">
+            <div
+              style={{
+                width: `${course.progress}%`,
+                background:
+                  "linear-gradient(150.09deg, #8B15BD 0.04%, #F7936F 100.04%)",
+              }}
+              className="h-full  rounded-full"
+            ></div>
+          </div>
+          <p>{course.progress.toFixed(0)}%</p>
+        </div>
       </div>
     </div>
   );
