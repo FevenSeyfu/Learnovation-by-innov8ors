@@ -1,24 +1,30 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import ButtonSecondary from "../../utility/Button/ButtonSecondary";
+import ButtonPrimary from "../../utility/Button/ButtonPrimary";
 
 const Header = () => {
-  const navigate = useNavigate ();
+  const navigate = useNavigate();
   const location = useLocation();
-  
-  const scrollToFeatures = () => {
-    if (window.location.pathname !== "/") {
-      navigate("/", { replace: true });
+
+  const scrollToSection = async (targetId, targetRoute) => {
+    if (location.pathname !== targetRoute) {
+      await navigate(targetRoute, { replace: true });
     }
     setTimeout(() => {
-      const featuresSection = document.getElementById("features");
-      if (featuresSection) {
-        featuresSection.scrollIntoView({ behavior: "smooth" });
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
-    }, 0);
+    }, 100);
   };
+  
+  const scrollToFeatures = () => scrollToSection("features", "/");
+  const scrollToFAQ = () => scrollToSection("faq", "/contact");
+  
   return (
-    <header className="bg-lightOrange py-4 shadow-md px-6  md:mx-[10%] md:w-[80%]">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-lightOrange py-4 px-12 md:px-[10%] w-full border-2">
+      <div className="container mx-auto flex flex-col gap-2 items-start md:flex-row md:justify-between md:items-center">
         <Link to="/" className="flex items-center">
           <img
             src="/LearnovationAcademyLogo.png"
@@ -26,43 +32,65 @@ const Header = () => {
             className="h-20"
           />
         </Link>
-        <nav className="flex items-center space-x-4">
-          <ul className="flex space-x-4 text-sm md:text-lg font-medium items-center">
+        <nav className="flex">
+          <ul className="flex flex-col gap-2 items-start md:flex-row md:gap-5 text-lg font-medium md:items-center">
             <li>
-            {location.pathname === "/contact" ? (
-                 <Link to="/" className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                 Home
-               </Link>
+            {location.pathname === "/contact" ?  (
+               <button
+               onClick={scrollToFAQ}
+               className="text-gray-700 hover:text-gray-900 cursor-pointer"
+             >
+               FAQ
+             </button>
+            ):(
+              <button
+              onClick={scrollToFeatures}
+              className="text-gray-700 hover:text-gray-900 cursor-pointer"
+            >
+              Features
+            </button>
+           )}
+            </li>
+            <li>
+              {location.pathname === "/contact" ? (
+                <Link
+                to="/"
+                className="text-gray-700 hover:text-gray-900 cursor-pointer"
+              >
+                Home
+              </Link>
+                
               ) : (
-                <button
-                  onClick={scrollToFeatures}
+                <Link
+                  to="/contact"
                   className="text-gray-700 hover:text-gray-900 cursor-pointer"
                 >
-                  Features
-                </button>
+                  Contact
+                </Link>
               )}
             </li>
-            <li>
-              <Link to="/contact" className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                Contact
-              </Link>
+            <li className="hidden md:block">
+              <ButtonPrimary
+                size={"lg"}
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
+                Sign Up
+              </ButtonPrimary>
+            </li>
+            <li className="hidden md:block">
+              <ButtonSecondary
+                size={"lg"}
+                color={"gray"}
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Log In
+              </ButtonSecondary>
             </li>
           </ul>
-
-          <div className="flex items-center space-x-4 px-1">
-            <Link
-              to="/signup"
-              className="bg-purple hover:opacity-95 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
-            >
-              Sign Up
-            </Link>
-            <Link
-              to="/login"
-              className="bg-lightOrange hover:bg-gray-100 text-gray-700 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
-            >
-              Log In
-            </Link>
-          </div>
         </nav>
       </div>
     </header>

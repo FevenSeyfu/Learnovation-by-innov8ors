@@ -6,7 +6,7 @@ import HeadingH1 from "../../utility/Home/HeadingH1";
 
 const Features = () => {
   return (
-    <div id="features" className="flex flex-col gap-7 md:gap-11 mt-7 px-[45px] md:px-[10%] justify-center items-center font-nunito md:font-inter">
+    <div id="features" className="flex flex-col gap-7 md:gap-11 mt-7 justify-center items-center font-nunito md:font-inter">
       <div id="title" className="flex flex-col gap-8 items-center  text-left ">
         <TitleBtn>Features</TitleBtn>
         <HeadingH1>
