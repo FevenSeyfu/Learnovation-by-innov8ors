@@ -4,12 +4,14 @@ import CourseCard from "../../components/Dashboard/CourseCard/Card";
 import RecommendationCard from "../../components/Dashboard/Recommendation/RecommendationCard";
 import Typography from "../../components/utility/Typography/Typography";
 import StreakTracker from "../../components/Dashboard/StreakTracker/StreakTracker";
+import { useDarkMode } from "usehooks-ts";
 
 const DashboardPage = () => {
+  const isDarkMode = useDarkMode();
    const courses = [
-    {id:1, name: 'Course Name', lesson: 'Name of Lesson', progress: 36 },
-    {id:2, name: 'Course Name', lesson: 'Name of Lesson', progress: 4 },
-    {id:3, name: 'Course Name', lesson: 'Name of Lesson', progress: 50 },
+    {id:1, name: 'Course Name', lesson: 'Name of Lesson', progress: 36,category: 'Business' },
+    {id:2, name: 'Course Name', lesson: 'Name of Lesson', progress: 4 ,category: 'Business'},
+    {id:3, name: 'Course Name', lesson: 'Name of Lesson', progress: 50,category: 'Business' },
   ];
 
   const recommendations = [
@@ -40,8 +42,7 @@ const DashboardPage = () => {
           weight={"regular"}
           size={"lg"}
           type={"text"}
-          color="#000"
-          className="dark:text-white"
+          color={isDarkMode ? "#fff" : "#000"}
         >
           Recommendations for you
         </Typography>

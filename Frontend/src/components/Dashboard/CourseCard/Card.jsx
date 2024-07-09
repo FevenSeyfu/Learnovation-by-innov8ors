@@ -21,13 +21,13 @@ function CourseCard({ course }) {
       <div className="flex flex-col gap-4 w-full">
         <div className="flex flex-row justify-between">
           <div>
-            <div className="bg-white dark:bg-gray-900 dark:text-white dark:border-neutral-800">
+            <div className="flex border-2 rounded-full w-fit px-4 py-1 items-center  dark:border-neutral-400">
             <Typography
               tag={"span"}
               weight={"medium"}
               size={"xs"}
               type={"text"}
-              color={isDarkMode ? "#fffff" : "#116B47"}
+              color={isDarkMode ? "#86efac" : "#116B47"}
             >
               {course.category}
             </Typography>
@@ -38,8 +38,7 @@ function CourseCard({ course }) {
                 weight={"medium"}
                 size={"xs"}
                 type={"display"}
-                color="#000"
-                className="dark:text-white"
+                color={isDarkMode ? "#fffff" : "#667085"}
               >
                 {course.name}
               </Typography>

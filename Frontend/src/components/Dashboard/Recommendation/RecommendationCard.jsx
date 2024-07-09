@@ -15,7 +15,6 @@ function RecommendationCard({ recommendation }) {
           size={"xs"}
           type={"text"}
           color="#116B47"
-          className="dark:text-white"
         >
           {recommendation.category}
         </Typography>
@@ -48,7 +47,7 @@ function RecommendationCard({ recommendation }) {
               weight={"normal"}
               size={"xs"}
               type={"text"}
-              color={isDarkMode ? "#101828" : "#e5e7eb"}
+              color={isDarkMode ? "#fff" : "#e5e7eb"}
             >
               {recommendation.learners} Active learners
             </Typography>
@@ -60,7 +59,7 @@ function RecommendationCard({ recommendation }) {
               weight={"normal"}
               size={"xs"}
               type={"text"}
-              color={isDarkMode ? "#101828" : "#e5e7eb"}
+              color={isDarkMode ? "#fff" : "#e5e7eb"}
             >
               {recommendation.hours} hrs
             </Typography>
