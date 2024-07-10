@@ -1,8 +1,8 @@
+// eslint-disable-next-line
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import circleIcon from '../assets/BulletCircle.svg';
-import checkmarkIcon from '../assets/CheckedMark.svg';
+
 
 const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, courseId }) => {
     const [activeSection, setActiveSection] = useState(null);
@@ -25,9 +25,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s1_video'])}
                     >
                         {completedSections.includes('m1_s1_video') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -47,9 +47,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s1_reading'])}
                     >
                         {completedSections.includes('m1_s1_reading') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -69,9 +69,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s1_quiz'])}
                     >
                         {completedSections.includes('m1_s1_quiz') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -91,9 +91,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s1_interactive-tutorial'])}
                     >
                         {completedSections.includes('m1_s1_interactive-tutorial') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -113,9 +113,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s1_assignment'])}
                     >
                         {completedSections.includes('m1_s1_assignment') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -135,9 +135,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s2_reading'])}
                     >
                         {completedSections.includes('m1_s2_reading') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
@@ -157,9 +157,9 @@ const CourseEnrolledSidebar = ({ completedSections, setCompletedSections, course
                         onClick={() => setCompletedSections([...completedSections, 'm1_s2_quiz'])}
                     >
                         {completedSections.includes('m1_s2_quiz') ? (
-                            <img src={checkmarkIcon} alt="Checkmark Icon" className="w-5 h-5" />
+                            <img src="/CheckedMark.svg" alt="Checkmark Icon" className="w-5 h-5" />
                         ) : (
-                            <img src={circleIcon} alt="Circle Icon" className="w-5 h-5" />
+                            <img src="/BulletCircle.svg" alt="Circle Icon" className="w-5 h-5" />
                         )}
                     </div>
                     <Link
