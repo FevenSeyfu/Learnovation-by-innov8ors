@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/LandingPage/Layout";
 import DashboardLayout from "./components/Layout/DashboardPage/Layout";
@@ -13,7 +14,7 @@ import Onboarding from "./Pages/Onboarding/Onboarding";
 
 import { OnboardingFormProvider } from "./Context/OnboardingFormContext";
 import { SidebarProvider } from "./Context/SidebarContext";
-import { DropdownProvider } from "./Context/DropdownContext";
+import { CourseProvider } from "./Context/CourseContext";
 
 import Events from "./Pages/Events/Events";
 import Courses from "./Pages/Courses/Courses";
@@ -51,16 +52,25 @@ function App() {
         <Route
           path="dashboard"
           element={
-              <SidebarProvider>
-                <DashboardLayout />
-              </SidebarProvider>
+            <SidebarProvider>
+              <DashboardLayout />
+            </SidebarProvider>
           }
         >
           <Route index element={<DashboardPage />} />
           <Route path="explore/courses" element={<Courses />} />
           <Route path="explore/events" element={<Events />} />
           <Route path="explore/mentors" element={<Mentors />} />
-          <Route path="course/:id" element={<CourseDetailPage />} />
+          {/* Course Details and Routes */}
+          <Route
+            path="course/:id"
+            element={
+              <CourseProvider>
+                <CourseDetailPage />
+              </CourseProvider>
+            }
+          ></Route>
+          {/* Course Enrolled Route */}
           <Route path="course/:id/enrolled" element={<CourseEnrolled />} />
         </Route>
       </Routes>
