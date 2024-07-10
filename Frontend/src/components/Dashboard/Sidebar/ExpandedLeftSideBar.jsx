@@ -1,9 +1,7 @@
-// src/components/Dashboard/Sidebar/ExpandedLeftSideBar.jsx
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import SideBarExplore from '../../Explore/SideBarExplore';
 import CourseInfoSidebar from '../../Course/CourseInfoSidebar';
-import CourseEnrolledSidebar from '../../Course/CourseEnrolledSidebar';
 
 
 const ExpandedLeftSideBar = () => {
@@ -14,10 +12,9 @@ const ExpandedLeftSideBar = () => {
     content = <SideBarExplore />;
   } else if (/^\/dashboard\/course\/\d+$/.test(location.pathname)) {
     content = <CourseInfoSidebar />;
-  } else if (/^\/course\/\d+\/(advanced-design-concepts|design-thinking-and-strategy|creative-problem-solving)\/(video|reading|quiz|assignment)$/.test(location.pathname)) {
-    content = <CourseEnrolledSidebar />;
-  } else {
-    content = <div>No sidebar content available for this route.</div>;
+  } 
+  else {
+    content = <div></div>;
   }
 
   return (
