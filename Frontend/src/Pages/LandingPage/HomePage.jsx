@@ -6,9 +6,11 @@ import HowItWorks from '../../components/LandingPage/Home/HowItWorks.jsx';
 const HomePage = () => {
 
   return (
-    <div className="bg-lightOrange">
+    <div className="bg-lightOrange px-12 md:px-0 md:mx-[10%] md:w-[80%]">
         <Hero />
-        <Features />
+       <div id="features">
+       <Features />
+       </div>
         <HowItWorks />
         <CallToAction />
     </div>
