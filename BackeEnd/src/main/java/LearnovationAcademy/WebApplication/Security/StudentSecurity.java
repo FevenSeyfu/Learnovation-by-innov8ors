@@ -118,7 +118,7 @@ public class StudentSecurity {
 				
 				registry.addMapping("/**")
 				.allowedMethods("*")
-				.allowedOrigins("http://127.0.0.1:5173")
+				.allowedOrigins("https://learnovation-innov8ors.netlify.app/")
 				.allowedHeaders("*") ;
 				
 				
