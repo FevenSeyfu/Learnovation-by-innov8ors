@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <>
 
-      <div className="bg-lightOrange">
+      <div className="bg-lightOrange dark:bg-gray-900 dark:text-white">
         <ContactForm />
         <CallToAction />
         <Faq />
