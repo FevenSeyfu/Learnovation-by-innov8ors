@@ -26,10 +26,10 @@ const EventCard = ({
     navigate(`/event/${id}`);
   };
   return (
-    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] text-gray-900 dark:text-white dark:bg-gray-800 dark:border-gray-700 flex flex-col gap-2 ">
+    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] text-gray-600 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-700 flex flex-col gap-2 ">
       <img src={getImageURL(eventImg)} alt="event image" />
-      <div className="max-h-8 overflow-hidden">
-      <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"} color="#4b5563">
+      <div className="max-h-8 overflow-hidden text-gray-900 dark:text-white">
+      <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"} >
           {eventName}
         </Typography>
       </div>

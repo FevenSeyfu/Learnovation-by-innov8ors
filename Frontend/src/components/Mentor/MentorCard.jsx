@@ -28,11 +28,11 @@ const MentorCard = ({
           weight={"semiBold"}
           size={"lg"}
           type={"text"}
-          color={"#000000"}
+          
         >
           {mentorName}
         </Typography>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"medium"}
@@ -70,7 +70,8 @@ const MentorCard = ({
             {country}
           </Typography>
           <div>
-          <Typography
+          <div className="text-gray-800 dark:text-gray-300">
+          <Typography 
             tag={"h3"}
             weight={"bold"}
             size={"sm"}
@@ -79,6 +80,7 @@ const MentorCard = ({
           >
             Helped
           </Typography>
+          </div>
           <Typography
             tag={"h3"}
             weight={"medium"}
@@ -88,6 +90,7 @@ const MentorCard = ({
           >
             {helped}
           </Typography>
+          <div className="text-gray-800 dark:text-gray-300">
           <Typography
             tag={"h3"}
             weight={"bold"}
@@ -97,6 +100,7 @@ const MentorCard = ({
           >
             Reviewed
           </Typography>
+          </div>
           <Typography
             tag={"h3"}
             weight={"medium"}
