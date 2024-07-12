@@ -75,7 +75,7 @@ const MentorCard = ({
             weight={"bold"}
             size={"sm"}
             type={"text"}
-            color="#101828"
+            color="#4b5563"
           >
             Helped
           </Typography>
@@ -93,7 +93,7 @@ const MentorCard = ({
             weight={"bold"}
             size={"sm"}
             type={"text"}
-            color="#101828"
+            color="#4b5563"
           >
             Reviewed
           </Typography>
