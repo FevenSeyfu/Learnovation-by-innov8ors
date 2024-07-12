@@ -9,7 +9,7 @@ import Instructor from "./Instructor";
 import ButtonCTA from "../utility/Button/ButtonCTA";
 
 const CourseSkeleton = () => (
-  <div className="animate-pulse flex flex-col gap-4 p-4">
+  <div className="animate-pulse flex flex-col gap-4 p-4 ">
     <div className="h-8 bg-gray-300 rounded"></div>
     <div className="h-6 bg-gray-300 rounded w-3/4"></div>
     <div className="h-6 bg-gray-300 rounded w-5/6"></div>
@@ -37,7 +37,7 @@ const CourseDetail = () => {
   }
   return (
     <div className="flex flex-col items-start gap-2 py-4 text-left">
-      <div id="content" className="flex flex-col items-start  gap-8">
+      <div id="content" className="flex flex-col items-start  gap-8 ">
         <div id="heading">
           <p className="font-inter font-semibold text-lg text-[#344054] dark:text-white">
             course
@@ -47,7 +47,7 @@ const CourseDetail = () => {
           </GradientPurpleHeading>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ">
           <Typography
             tag={"h3"}
             weight={"bold"}
