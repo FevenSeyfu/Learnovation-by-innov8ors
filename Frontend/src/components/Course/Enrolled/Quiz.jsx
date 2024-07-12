@@ -119,7 +119,7 @@ const Quiz = ({ completedSections, setCompletedSections }) => {
       <div className="flex flex-col w-full gap-4 h-full">
         {showQuizStart ? (
           <div className="flex flex-col ">
-            <p className="text-gray-700 mb-4 text-lg">
+            <p className="text-gray-700 mb-4 text-lg dark:text-gray-400">
               After completing the reading, take this quiz to test your
               understanding of the key concepts. The quiz includes
               multiple-choice and short-answer questions to reinforce your
@@ -137,7 +137,7 @@ const Quiz = ({ completedSections, setCompletedSections }) => {
                     </button>
 
                     <button
-                      className="bg-white border border-gray-400 hover:bg-gray-300 text-gray-800 py-3 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
+                      className="bg-white border border-gray-400 hover:bg-gray-300 text-gray-800 dark:bg-gray-800 dark:border-gray-900 dark:hover:bg-gray-700 dark:text-white py-3 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
                       onClick={handleTakeQuizAgain}
                     >
                       Take Quiz Again
@@ -154,18 +154,18 @@ const Quiz = ({ completedSections, setCompletedSections }) => {
         ) : !showResults ? (
           <>
             <div className="flex items-center mb-4">
-              <div className="bg-gray-200 rounded-full h-2 mb-2 w-full">
+              <div className="bg-gray-200 rounded-full h-2 mb-2 w-full dark:bg-gray-800">
                 <ProgressBar progressPercentage={getProgressPercentage()} />
               </div>
               {/* Display Percentage After Progress Bar */}
-              <p className="text-gray-700 text-right ml-4 mb-2 text-lg">
+              <p className="text-gray-700 dark:text-gray-400 text-right ml-4 mb-2 text-lg">
                 {getProgressPercentage()}%
               </p>
             </div>
             {currentQuestion < questions.length && (
               <div className="flex flex-col justify-between   h-full">
                 <div>
-                  <h2 className="text-lg font-bold mb-4 text-gray-800">
+                  <h2 className="text-lg font-bold mb-4 text-gray-800 dark:text-white">
                     Question {currentQuestion + 1}:{" "}
                     {questions[currentQuestion].questionText}
                   </h2>
@@ -228,10 +228,10 @@ const Quiz = ({ completedSections, setCompletedSections }) => {
               <img src={completeIcon} alt="" />
             </div>
             <div className=" text-center items-center ">
-              <h2 className="text-2xl font-bold mt-4 text-gray-800">
+              <h2 className="text-2xl font-bold mt-4 text-gray-800 dark:text-white">
                 You completed the quiz!
               </h2>
-              <p className="text-gray-700 mt-2">
+              <p className="text-gray-700 dark:text-gray-400 mt-2">
                 Your score: {calculateScore()} out of {questions.length}
               </p>
             </div>

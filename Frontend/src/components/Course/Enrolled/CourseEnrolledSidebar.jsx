@@ -51,10 +51,10 @@ const CourseEnrolledSidebar = ({
   };
 
   return (
-    <div className=" bg-white p-4 rounded-lg shadow-md flex flex-col h-screen min-w-[326px]">
+    <div className=" bg-white p-4 rounded-lg shadow-md flex flex-col h-screen min-w-[326px] dark:bg-gray-900 dark:border-neutral-800 border">
       {sections.map((section) => (
         <div key={section.title}>
-          <h2 className="text-lg mt-4 mb-2 text-black">
+          <h2 className="text-lg mt-4 mb-2 text-black dark:text-white">
           {section.title}
           </h2>
           <ul className="list-none pl-0">
@@ -77,7 +77,7 @@ const CourseEnrolledSidebar = ({
                     <img
                       src={CheckedMark}
                       alt="Checkmark Icon"
-                      className="w-5 h-5"
+                      className="w-5 h-5 "
                     />
                   ) : (
                     <img
@@ -88,8 +88,8 @@ const CourseEnrolledSidebar = ({
                   )}
                 </div>
                 <div
-                  className={`flex items-center ml-3 cursor-pointer ${
-                    item.type === activeSection ? "text-blue-500" : "text-gray-700"
+                  className={`flex items-center ml-3 cursor-pointer  ${
+                    item.type === activeSection ? "text-blue-500" : "text-gray-700 dark:text-gray-400"
                   }`}
                   onClick={() => setActiveSection(item.type)}
                 >

@@ -20,19 +20,19 @@ const Reading = ({ completedSections, setCompletedSections }) => {
           Design Thinking
         </GradientPurpleHeading>
       </div>
-      <h2 className="text-lg font-bold mb-4 text-gray-800">
+      <h2 className="text-lg font-bold mb-4 text-gray-800 dark:text-white">
         What is Design Thinking?
       </h2>
-      <p className="text-lg mb-4 text-gray-700">
+      <p className="text-lg mb-4 text-gray-700 dark:text-gray-400">
         Design thinking is a solution-focused approach to solving complex
         problems. It involves understanding the user, challenging assumptions,
         and redefining problems to identify alternative strategies and solutions
         that might not be instantly apparent.
       </p>
-      <h3 className="text-xl font-bold mb-4 text-gray-800">
+      <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
         Key stages include:
       </h3>
-      <ul className="list-disc pl-6 mb-4 text-gray-700">
+      <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-400">
         <li>
           <strong>1. Empathize:</strong> Understand the needs, experiences, and
           motivations of the people you are designing for.
@@ -53,7 +53,7 @@ const Reading = ({ completedSections, setCompletedSections }) => {
           gather feedback and refine the solutions.
         </li>
       </ul>
-      <p className="text-lg mb-4 text-gray-700">
+      <p className="text-lg mb-4 text-gray-700 dark:text-gray-400">
         In this reading, we will explore these stages in detail and discuss how
         they can be applied to real-world design challenges.
       </p>
