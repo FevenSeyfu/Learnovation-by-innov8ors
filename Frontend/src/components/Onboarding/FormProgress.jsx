@@ -14,7 +14,7 @@ const FormProgress = () => {
   const progressPercentage = (currentStepIndex / (stepOrder.length - 1)) * 100;
   return (
     <div className="w-full flex flex-row justify-center gap-4 items-center">
-      <div className="w-[868px] h-4 bg-[#F4F4F4] rounded-full overflow-hidden">
+      <div className="w-[868px] h-4 bg-[#F4F4F4] rounded-full overflow-hidden dark:bg-gray-800">
         <ProgressBar progressPercentage={progressPercentage} />
       </div>
       <p>{progressPercentage.toFixed(0)}%</p>
