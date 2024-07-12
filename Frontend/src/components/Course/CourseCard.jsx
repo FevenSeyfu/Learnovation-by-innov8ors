@@ -34,7 +34,7 @@ const CourseCard = ({
           weight={"semiBold"}
           size={"lg"}
           type={"text"}
-          color="#101828"
+          color="#4b5563"
           className="dark:text-white"
         >
           {courseName}
