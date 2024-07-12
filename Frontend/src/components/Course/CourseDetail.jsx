@@ -40,7 +40,7 @@ const CourseDetail = () => {
       <div id="content" className="flex flex-col items-start  gap-8 ">
         <div id="heading">
           <p className="font-inter font-semibold text-lg text-[#344054] dark:text-white">
-            course
+            Course
           </p>
           <GradientPurpleHeading size={"bold"}>
             {course.title}
@@ -57,6 +57,7 @@ const CourseDetail = () => {
           >
             About Course
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -66,6 +67,7 @@ const CourseDetail = () => {
           >
             {course.description}
           </Typography>
+          </div>
           <Typography
             tag={"h3"}
             weight={"bold"}
@@ -75,6 +77,7 @@ const CourseDetail = () => {
           >
             What you’re learn
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <ul className="list-disc pl-5">
             {course.whatYouWillLearn.map((item, index) => (
               <li key={index}>
@@ -90,6 +93,7 @@ const CourseDetail = () => {
               </li>
             ))}
           </ul>
+          </div>
           <Typography
             tag={"h3"}
             weight={"bold"}
@@ -99,6 +103,7 @@ const CourseDetail = () => {
           >
             Course Materials
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <ul className="list-disc pl-5">
             {Object.entries(course.courseMaterials).map(([key, value]) => (
               <li key={key}>
@@ -114,9 +119,10 @@ const CourseDetail = () => {
               </li>
             ))}
           </ul>
+          </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <div id="meta" className="flex flex-row flex-wrap items-center gap-4">
+        <div className="flex flex-col gap-4 ">
+          <div id="meta" className="flex flex-row flex-wrap items-center gap-4 text-gray-600 dark:text-gray-500">
           <CourseMeta duration={course.duration} rating={course.rating} level={course.level}/>
           </div>
             

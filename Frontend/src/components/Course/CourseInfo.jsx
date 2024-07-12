@@ -40,7 +40,7 @@ const CourseInfo = () => {
     alert("Claim certificate");
   };
   return (
-    <div className="p-4 border rounded-2xl flex flex-col gap-2">
+    <div className="p-4 border rounded-2xl flex flex-col gap-2 dark:border-gray-700">
       <div className="text-left flex flex-col gap-4">
         <div>
           <Typography
@@ -52,6 +52,7 @@ const CourseInfo = () => {
           >
             Language in
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -61,6 +62,7 @@ const CourseInfo = () => {
           >
             {course.language}
           </Typography>
+          </div>
         </div>
         <div>
           <Typography
@@ -72,6 +74,7 @@ const CourseInfo = () => {
           >
             Last Updated
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -81,6 +84,7 @@ const CourseInfo = () => {
           >
             {course.lastUpdated}
           </Typography>
+          </div>
         </div>
         <div>
           <Typography
@@ -92,6 +96,7 @@ const CourseInfo = () => {
           >
             Courses Type
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -101,6 +106,7 @@ const CourseInfo = () => {
           >
             {course.courseType}
           </Typography>
+          </div>
         </div>
         <div>
           <Typography
@@ -112,6 +118,7 @@ const CourseInfo = () => {
           >
             Enrolled
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -121,6 +128,7 @@ const CourseInfo = () => {
           >
             {course.learnersEnrolled}
           </Typography>
+          </div>
         </div>
         <div>
           <Typography
@@ -132,6 +140,7 @@ const CourseInfo = () => {
           >
             Certificate of Completion
           </Typography>
+          <div className="text-gray-600 dark:text-gray-400">
           <Typography
             tag={"p"}
             weight={"regular"}
@@ -141,6 +150,7 @@ const CourseInfo = () => {
           >
             {course.isCompleted ? "Completed" : "Locked"}
           </Typography>
+          </div>
         </div>
       </div>
       <img src={certificateHidden} alt="Certificate Preview" className="w-60" />

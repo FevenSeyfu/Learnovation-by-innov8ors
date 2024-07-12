@@ -72,7 +72,7 @@ const SetGoal = () => {
   }
 
   return (
-    <div className='p-4 border rounded text-left flex flex-col gap-4'>
+    <div className='p-4 border rounded text-left flex flex-col gap-4 dark:border-gray-700'>
       <Typography
         tag={"p"}
         weight={"regular"}

@@ -41,7 +41,7 @@ const CourseCard = ({
         </Typography>
       </div>
       <div className="flex flex-col justify-end gap-2 flex-grow">
-        <div className="flex flex-col gap-2 ">
+        <div className="flex flex-col gap-2 text-gray-600 dark:text-gray-400">
           <div className="max-h-16 overflow-hidden">
             <Typography
               tag={"p"}
