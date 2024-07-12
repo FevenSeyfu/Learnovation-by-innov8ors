@@ -20,7 +20,7 @@ FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR file from the build stage to the final image
-COPY --from=build /home/gradle/project/build/libs/demo-0.0.1-SNAPSHOT.jar demo.jar
+COPY ./build/libs/WebApplication-0.0.1-SNAPSHOT-plain.jar demo.jar
 
 # Expose port 8080 (optional)
 EXPOSE 8080
