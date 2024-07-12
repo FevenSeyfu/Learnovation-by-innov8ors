@@ -41,11 +41,11 @@ const SignUp = () => {
   navigate('/onboarding')
  }
   return (
-    <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20">
+    <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20 dark:bg-gray-900 dark:text-white">
       
       <div className="md:mb-10 mb-5 md:mt-24 mt-20 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
         
-        <div className=" h-full w-full bg-white pt-8 rounded-md">
+        <div className=" h-full w-full bg-white pt-8 rounded-md dark:bg-gray-900 dark:text-white">
         
           <div className="md:px-16 px-8">
 
