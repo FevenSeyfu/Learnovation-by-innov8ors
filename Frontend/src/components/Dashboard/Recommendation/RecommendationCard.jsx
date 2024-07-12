@@ -7,17 +7,19 @@ import { useDarkMode } from "usehooks-ts";
 function RecommendationCard({ recommendation }) {
   const isDarkMode = useDarkMode();
   return (
-    <div className="p-10 border-2 rounded-xl flex flex-col gap-4">
+    <div className="p-10 border-2 rounded-xl flex flex-col gap-4 dark:bg-gray-800 dark:border-gray-900">
       <div className="flex flex-col gap-2">
+        <div className="flex border-2 rounded-full w-fit px-4 py-1 items-center  dark:border-neutral-400 dark:text-green-300">
         <Typography
           tag={"span"}
           weight={"medium"}
           size={"xs"}
           type={"text"}
-          color="#116B47"
+          color={isDarkMode ? "#86efac" : "#116B47"}
         >
           {recommendation.category}
         </Typography>
+        </div>
         <div className="flex flex-col gap-px">
         <Typography
           tag={"h3"}
@@ -47,7 +49,7 @@ function RecommendationCard({ recommendation }) {
               weight={"normal"}
               size={"xs"}
               type={"text"}
-              color={isDarkMode ? "#fff" : "#e5e7eb"}
+              color={isDarkMode ? "#fffff" : "#667085"}
             >
               {recommendation.learners} Active learners
             </Typography>
@@ -59,7 +61,7 @@ function RecommendationCard({ recommendation }) {
               weight={"normal"}
               size={"xs"}
               type={"text"}
-              color={isDarkMode ? "#fff" : "#e5e7eb"}
+              color={isDarkMode ? "#fffff" : "#667085"}
             >
               {recommendation.hours} hrs
             </Typography>
