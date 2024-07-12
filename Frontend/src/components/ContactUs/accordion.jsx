@@ -7,7 +7,7 @@ const Accordion = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="px-8 py-3 bg-white rounded-lg mb-5 w-full">
+    <div className="px-8 py-3 bg-white rounded-lg mb-5 w-full dark:bg-slate-700 dark:border-slate-700 dark:text-white">
       <div className="flex justify-between items-center">
         <p className="pr-4 font-normal text-sm flex-1">{question}</p>
         <button
