@@ -16,7 +16,7 @@ const Instructor = ({ instructorImage, instructorName, instructorRole }) => {
           weight={"normal"}
           size={"xs"}
           type={"text"}
-          color="#101828"
+          color="#4b5563"
         >
           {instructorName}
         </Typography>

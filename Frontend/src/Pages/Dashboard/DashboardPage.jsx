@@ -8,7 +8,7 @@ import { useDarkMode } from "usehooks-ts";
 
 const DashboardPage = () => {
   const isDarkMode = useDarkMode();
-   const courses = [
+  const courses = [
     {id:1, name: 'Course Name', lesson: 'Name of Lesson', progress: 36,category: 'Business' },
     {id:2, name: 'Course Name', lesson: 'Name of Lesson', progress: 4 ,category: 'Business'},
     {id:3, name: 'Course Name', lesson: 'Name of Lesson', progress: 50,category: 'Business' },

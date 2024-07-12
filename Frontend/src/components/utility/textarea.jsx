@@ -7,7 +7,7 @@ export default function TextArea (props) {
             {props.label && <p className="text-gray-700 font-semibold mb-2">{props.label}</p>}
             <div className="mb-3">
                 <textarea
-                    className="placeholder-gray-500 text-xs text-gray-700 border rounded-lg border-silver p-3 w-full focus:outline-none focus:ring focus:ring-gray-500"
+                    className="placeholder-gray-500 text-xs text-gray-700 dark:text-white border rounded-lg border-silver p-3 w-full focus:outline-none focus:ring focus:ring-gray-500 dark:bg-slate-700 dark:border-slate-700"
                     placeholder= {props.placeholder}
                     onChange={props.onChange}
                     // eslint-disable-next-line react/no-unknown-property

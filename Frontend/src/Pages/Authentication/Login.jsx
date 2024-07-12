@@ -35,9 +35,9 @@ const LogIn = () => {
     navigate('/dashboard')
   }
   return (
-    <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20">
-      <div className="md:mb-10 mb-5 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12">
-        <div className=" h-full w-full bg-white pt-8 rounded-md">
+    <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20 dark:bg-gray-900 dark:text-white">
+      <div className="md:mb-10 mb-5 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12 ">
+        <div className=" h-full w-full bg-white pt-8 rounded-md dark:bg-gray-900 dark:text-white">
           <div className="md:px-16 px-8">
             <div className="flex justify-center">
               <h3 className="text-3xl font-bold mx-auto md:pt-12  bg-gradient-to-r from-textBlue via-fushiaPink to-lightPink inline-block text-transparent bg-clip-text">
@@ -75,9 +75,9 @@ const LogIn = () => {
               </div>
 
               <div className="flex items-center md:mt-5">
-                <div className="h-px flex-1 bg-silver pr-5"></div>
+                <div className="h-px flex-1 bg-silver pr-5 dark:bg-neutral-700"></div>
                 <span className="pr-3 pl-3 text-lg">or</span>
-                <div className="h-px flex-1 bg-silver"></div>
+                <div className="h-px flex-1 bg-silver dark:bg-neutral-700"></div>
               </div>
 
               <div className="mt-2 text-textColor font-medium">

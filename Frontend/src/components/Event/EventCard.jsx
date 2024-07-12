@@ -26,10 +26,10 @@ const EventCard = ({
     navigate(`/event/${id}`);
   };
   return (
-    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] dark:bg-gray-900 dark:text-white dark:border-neutral-400 flex flex-col gap-2 ">
+    <div className="font-inter rounded-lg p-4 border border-[#C8C7FF] bg-[#FCFCFD] text-gray-900 dark:text-white dark:bg-gray-800 dark:border-gray-700 flex flex-col gap-2 ">
       <img src={getImageURL(eventImg)} alt="event image" />
       <div className="max-h-8 overflow-hidden">
-      <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"}>
+      <Typography tag={"h2"} weight={"semiBold"} size={"lg"} type={"text"} color="#4b5563">
           {eventName}
         </Typography>
       </div>
@@ -91,7 +91,7 @@ const EventCard = ({
               weight={"medium"}
               size={"xs"}
               type={"text"}
-              color="#101828"
+              color="#4b5563"
             >
               Prices Included
             </Typography>
@@ -110,7 +110,7 @@ const EventCard = ({
                 weight={"normal"}
                 size={"xs"}
                 type={"text"}
-                color="#101828"
+                color="#4b5563"
               >
                 {hostName}
               </Typography>

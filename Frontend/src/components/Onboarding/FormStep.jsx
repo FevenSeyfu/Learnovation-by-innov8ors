@@ -20,7 +20,7 @@ const FormStep = ({ step }) => {
       {Object.entries(step.options).map(([key, value]) => (
         <div
           key={key}
-          className={`flex items-center space-x-2 flex-row-reverse justify-between border border-[#8482ED] rounded-lg py-4 px-6 ${
+          className={`flex items-center space-x-2 flex-row-reverse justify-between border border-[#8482ED] dark:text-white dark:bg-gray-800 rounded-lg py-4 px-6 ${
             state.formData[step.name] === key ? "bg-[#EBE7FF]" : ""
           }`}
           onClick={() => handleOptionChange(key)}
@@ -47,7 +47,7 @@ const FormStep = ({ step }) => {
               <img src={checkedIcon} alt="Checked" className="w-[33.33px] h-[33.33px]" />
             )}
           </label>
-          <span className="font-inter font-medium text-xl leading-[30px] text-[#344054]">
+          <span className="font-inter font-medium text-xl leading-[30px] text-[#344054] dark:text-white">
             {value}
           </span>
         </div>

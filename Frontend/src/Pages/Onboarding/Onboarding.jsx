@@ -26,7 +26,7 @@ const Onboarding = () => {
     navigate("/dashboard");
   };
   return (
-    <div className="w-full h-screen flex flex-col items-center py-4 justify-evenly px-[23%]">
+    <div className="w-full h-screen flex flex-col items-center py-4 justify-evenly px-[23%] dark:bg-gray-900 dark:text-white">
       <FormProgress />
       {steps.map((step) => (
         <FormStep key={step.id} step={step} />
