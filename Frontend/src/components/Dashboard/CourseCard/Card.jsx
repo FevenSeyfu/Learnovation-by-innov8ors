@@ -16,7 +16,7 @@ function CourseCard({ course }) {
     navigate(`/dashboard/course/${course.id}/enrolled`);
   }
   return (
-    <div className="flex flex-row font-inter items-start gap-4 p-10 border-2 rounded-lg">
+    <div className="flex flex-row font-inter items-start gap-4 p-10 border-2 rounded-lg dark:bg-gray-800 dark:border-gray-900">
       <img src={course.Img} alt="" className="w-12 h-12 rounded-full border" />
       <div className="flex flex-col gap-4 w-full">
         <div className="flex flex-row justify-between">
