@@ -36,9 +36,9 @@ const SetGoalModal = ({ onConfirm, onCancel }) => {
         <ButtonSecondary size={"2xl"} color={"gray"} onClick={onCancel}>
           Close
         </ButtonSecondary>
-        <ButtonPrimary size={"lg"} onClick={onConfirm}>
+        {/* <ButtonPrimary size={"lg"} onClick={onConfirm}>
           View Calender
-        </ButtonPrimary>
+        </ButtonPrimary> */}
       </div>
     </div>
   );
