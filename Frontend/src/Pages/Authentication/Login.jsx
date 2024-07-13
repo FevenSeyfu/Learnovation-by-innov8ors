@@ -8,6 +8,8 @@ import { FcGoogle } from "react-icons/fc";
 import { ImGithub } from "react-icons/im";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
 const LogInSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
@@ -18,22 +20,46 @@ const LogInSchema = Yup.object().shape({
 });
 
 const LogIn = () => {
-  const navigate = useNavigate()
-  const { values, handleChange, handleSubmit, errors } = useFormik({
+  const navigate = useNavigate();
+  const { values, handleChange, handleBlur, handleSubmit, errors, touched } = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: LogInSchema,
     onSubmit: (values) => {
-      // alert(JSON.stringify(values));
       console.log(values);
     },
   });
- 
-  const handleLogin = () => {
-    navigate('/dashboard')
-  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit();
+    navigate("/dashboard");
+  };
+
+  const googleLogin = useGoogleLogin({
+    onSuccess: (codeResponse) => {
+      axios
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo? 
+            access_token=${codeResponse.access_token}`,
+          {
+            headers: {
+              Authorization: `Bearer 
+                ${codeResponse.access_token}`,
+              Accept: "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          console.log(res.data);
+          navigate("/dashboard");
+        })
+        .catch((err) => console.log(err));
+    },
+    onError: (error) => console.log("Login Failed:", error),
+  });
   return (
     <div className="bg-lightOrange md:pt-20 pt-20 md:pb-30 pb-20 dark:bg-gray-900 dark:text-white">
       <div className="md:mb-10 mb-5 rounded-md bg-gradient-to-r from-purplePink to-deepOrange p-px md:mx-auto mx-12 md:w-6/12 ">
@@ -45,19 +71,25 @@ const LogIn = () => {
               </h3>
             </div>
 
-            <form className="md:pt-6 pt-3" onSubmit={handleSubmit}>
+            <form className="md:pt-6 pt-3" onSubmit={handleFormSubmit}>
               <TextInput
                 label="Email"
                 onChange={handleChange("email")}
-                error={errors.email}
+                onBlur={handleBlur("email")}
+                error={touched.email && errors.email ? errors.email : ""}
                 value={values.email}
+                autocomplete="email"
               />
               <TextInput
                 label="Password"
                 type="password"
                 onChange={handleChange("password")}
-                error={errors.password}
+                onBlur={handleBlur("password")}
+                error={
+                  touched.password && errors.password ? errors.password : ""
+                }
                 value={values.password}
+                autocomplete="current-password"
               />
 
               <div className="flex justify-end mb-3">
@@ -66,7 +98,9 @@ const LogIn = () => {
                 </p>
               </div>
 
-              <Button onClick={handleLogin}>Join</Button>
+              <Button type="submit">
+                Join
+              </Button>
 
               <div className="flex justify-end">
                 <p className="text-sm font-semibold">
@@ -81,11 +115,11 @@ const LogIn = () => {
               </div>
 
               <div className="mt-2 text-textColor font-medium">
-                <ThirdPartyButton>
+                <ThirdPartyButton onClick={(e) => {e.preventDefault(); googleLogin();}}>
                   <div className="px-3">
                     <FcGoogle className="h-5 w-5" />
                   </div>
-                  Sign up with Google
+                  Login with Google
                 </ThirdPartyButton>
               </div>
 
@@ -94,7 +128,7 @@ const LogIn = () => {
                   <div className="px-3">
                     <ImGithub className="h-5 w-5" />
                   </div>
-                  Sign up with GitHub
+                  Login with GitHub
                 </ThirdPartyButton>
               </div>
             </form>
